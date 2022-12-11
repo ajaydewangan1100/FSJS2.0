@@ -5,7 +5,7 @@ All articles are here
 
 
 ## [HTML](HTML)
-All HTML Learning & Project Files goes here
+All HTML Learning and Project Files goes here
 
 
 ## [CSS](CSS)
