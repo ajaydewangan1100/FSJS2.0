@@ -1,0 +1,78 @@
+/* You can not modify anything in the HTML */
+/* You can only modify the CSS file */
+body {
+    font-family : 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.navbar-container {
+    padding : 50px 100px ;
+    display : flex ;
+    align-items: center ;
+    
+}
+
+/* .navbar-container {
+    display:  : float ;
+} */
+.navbar-container div img {
+    height : 38px ;
+}
+.grow-list {
+    /* display : flex ; */
+    font-weight: 500 ;
+    color : #b3b3b3
+}
+
+li:first-child {
+    color: black ;
+}
+.list {
+    list-style-type: none ;
+    display : flex ;
+}
+.list-item {
+    padding : 5px 20px ;
+    dcolor : #b3b3b3 ;
+    dfont-weight: 500 ;;
+}
+
+.nav-button {
+    display: float ;
+    margin-left: 400px;
+    padding : 20px 25px;
+    color : rgb(233, 233, 233);
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgb(80, 80, 170);
+    border : none ;
+    border-radius: 15px;
+}
+
+.banner-container {
+    display: flex;
+    padding-left: 50px;
+}
+.banner-container:first-child{
+    width : 50% ;
+}
+.heading-text {
+    font-size:70px;
+    padding-left : 50px ;
+    color :rgb(80, 56, 102);
+    width : 400px ;
+}
+span {
+    color :rgb(111, 62, 167);
+}
+.description {
+    padding: 0px 50px;
+    
+    color :#b3b3b3 ;
+    font-size: 18px;
+}
+.btn{
+    margin : 50px 50px ;
+    padding : 28px 55px ;
+    font-size: 17px;
+
+}
