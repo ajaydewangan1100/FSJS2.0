@@ -4,6 +4,8 @@
 Source code here
 
 ## [Website link](https://clinquant-cranachan-52848b.netlify.app/)
-Wesite for seeing
+Website for seeing
+
+Output Shown
 
 ![Output](output.png)
