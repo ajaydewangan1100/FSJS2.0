@@ -1,0 +1,74 @@
+/* You can not modify anything in the HTML */
+/* You can only modify the CSS file */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin : 0px ;
+    padding: 0px ;
+}
+.container {
+    
+}
+.navbar {
+    display: flex ;
+    background-color: #000;
+    align-items: center;
+    color: #e1e1e1;
+}
+.logo {
+    height : 30px ;
+    padding : 0px 60px ;
+}
+.line {
+    height :  50px ;
+    border-left: 1px solid white;
+    margin: 15px 10px ;;
+}
+.grow-list {
+    display: flex;
+    float: left;
+}
+.list-item {
+    display: flex;
+    float :left ;
+    color: beige;
+    padding : 10px 25px ;
+    font-size: 13px ;
+    font-weight: bold ;
+}
+.button-small {
+    font-size : 14px;
+    font-weight : bold;
+    color : white;
+    margin-left : 300px ;
+    padding : 7px 28px ;
+    background-color : #BA13C3 ;
+    border : none ;
+    border-radius: 7px ;
+
+}
+.hero {
+    background-image: url("./assets/bg.png");
+    background-repeat: no-repeat;
+    padding :150px ;
+    text-align: center;
+}
+.hero-heading {
+    color : white ;
+    font-size: 60px ;
+    margin: 20px 100px;
+    float: right;
+}
+.hero-description {
+    color: white;
+    font-size: 25px;
+}
+.button-large  {
+    font-size : 28px;
+    font-weight : bold;
+    color : white;
+    padding : 20px 25px ;
+    background-color : #BA13C3 ;
+    border : none ;
+    border-radius: 8px ;
+    margin : 20px 30px ;
+}
