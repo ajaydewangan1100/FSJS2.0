@@ -72,21 +72,21 @@ svg {
 }
 .square>img {
     position: absolute;
-    height: 350px;
-    left: 150px;
-    top: 350px;
+    height: 340px;
+    left: 140px;
+    top: 330px;
 }
 .hero-container>div>img {
     position: absolute;
     top: 100px;
     left: 0px;
-    height: 550px;
+    height: 520px;
 }
 .globe>img {
     position: absolute;
     margin-top: 50px ;
     top: 0px;
-    right: 530px;
+    right: 500px;
     height: 60px ;
 }
 .hero-container>span:nth-child(3) {
@@ -107,19 +107,19 @@ svg {
 .hero-container-right {
     text-align: center;
     position: absolute;
-    width: 750px;
+    width: 700px;
     right: 0px;
     top: 200px;
     padding-left: 50px ;
 }
 .hero-heading {
     color: rgb(26, 26, 26);
-    font-size: 55px;
+    font-size: 50px;
     font-weight: bolder;
     margin-top: 0px;
 }
 .hero-description {
-    padding: 0px 80px;
+    padding: 0px 50px;
     color: grey;
     font-family: poppins;
 }
