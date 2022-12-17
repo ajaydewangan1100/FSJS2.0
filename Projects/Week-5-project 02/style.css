@@ -5,6 +5,7 @@
 }
 body {
     background-color: teal;
+    overflow-x: hidden;
 }
 /* Header */
 header {
@@ -63,7 +64,7 @@ header>button {
     line-height: 30px;
     font-weight: 300;
 }
-.section-1>div>button {
+.btn-header>button {
     color: rgb(224, 224, 224);
     font-size: 16px;
     font-weight: 600;
@@ -73,14 +74,17 @@ header>button {
     margin-top: 50px;
     background-color: black;
 }
-.section-1>div>button.btn-bg-blue {
+.btn-header>.btn-bg-blue {
     background-color: #168BFB;
     border-style: hidden;
     margin-right: 20px ;
 }
-.section-1>div>button:hover {
+.btn-bg-blue:hover {
     background-color: #168BFB;
     color: white;
+}
+.btn-hover-blue:hover {
+    background-color: #168BFB;
 }
 /* Section-2 */
 .section-2 {
@@ -90,33 +94,41 @@ header>button {
     justify-content: space-evenly;
     background-color: rgb(34, 34, 34);
 }
+.section-2>img {
+    min-width: 150px;
+    padding: 0px 20px;
+}
 /* Section-3 */
 .section-3 {
     padding: 100px 100px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
     text-align: center;
+    margin: auto;
     background-color: #FFFFFF;
 }
 .section-3>h1 {
     font-size: 55px;
-    padding: 25px;
+    max-width: 85vw;
+    margin: auto;
 }
 .section-3>p {
     color: rgb(168, 168, 168);
     font-size: 22px;
-    padding: 10px 300px;
+    margin: auto;
+    max-width: 500px;
 }
 .section-3>div {
     display: flex;
-    flex-direction: row;
-    padding: 40px 0px;
+    justify-content: center;
 }
 .section-3>div>div {
     border: 2px solid rgb(194, 194, 194);
-    margin: 125px 25px;
+    margin: 125px 20px;
     border-radius: 35px;
+    min-width: 220px;
+    max-width: 300px;
 }
 .section-3>div>div>img {
     padding: 25px 0px;
@@ -146,7 +158,7 @@ header>button {
 /* section-4 */
 .section-4 {
     background-color: #ffffff;
-    padding: 0px 100px;
+    padding: 0px 10vw;
 }
 .section-4>h1 {
     font-size: 50px;
@@ -161,13 +173,11 @@ header>button {
     flex-direction:column ;
 }
 .sec-4-div-1>a {
-    text-decoration: none;
-}
-.sec-4-div-1>a {
     padding: 32px 30px;
     color: rgb(0, 0, 0);
     font-size: 28px;
     font-weight: bold;
+    text-decoration: none;
     background-color: rgb(255, 255, 255);
     margin-bottom: 26px;
     width: 43vw;
@@ -180,7 +190,8 @@ header>button {
 .sec-4-div-1>a>span {
     border: 1px solid rgb(148, 148, 148);
     height: 40px;
-    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -201,8 +212,6 @@ header>button {
 }
 .sec-4-div-2>ul {
     list-style-type: none;
-    display: flex;
-    flex-direction: column;
     margin: 0px 25px;
     background-color: rgb(0, 0, 0);
     border-radius: 35px;
@@ -220,12 +229,12 @@ header>button {
     background-color: rgb(231, 231, 231);
 }
 .sec-4-div-2>ul>li {
-    width: 26vw;
+    width: 80%;
     color: white;
     font-size: 18px;
     margin: 10px 10px 0px;
     position: relative;
-    padding: 22px 60px;
+    padding: 22px 5px 22px 60px;
     background-color: rgb(43, 43, 43);
     border-radius: 30px;
 }
@@ -254,14 +263,15 @@ header>button {
 .sec-5-div-2 {
     margin-top: 150px ;
     display: flex;
+    flex-wrap: wrap;
 }
 .sec-5-div-2>div {
-    width: 26vw;
+    width: 280px;
     margin: 3vw 1vw;
     padding: 3vw 2vw;
     background-color: white;
     border-radius: 2rem;
-    position: relative;
+    /* position: relative; */
 }
 .sec-5-div-2>div>h2 {
     font-size: 2rem;
@@ -291,7 +301,7 @@ header>button {
 }
 .margin-t-1 {
     margin-top: 40px;
-}
+}   
 .sec-5-div-2>div>ul>li {
     display: flex;
     justify-content: left;
@@ -306,6 +316,8 @@ header>button {
     color: white;
     width: 22vw;
     border: none;
+    max-width: 95%;
+    margin-left: auto;
     border-radius:30px;
     font-size: 1rem;
     font-weight: 600;
@@ -335,8 +347,7 @@ header>button {
 }
 /* Section-6 */
 .section-6 {
-    padding: 10vw 0px 10vw 10vw;
-    ddisplay: flex;
+    padding: 10vw 0px 5vw 10vw;
     background-color: white;
 }
 .sec-6-div-1 {
@@ -358,5 +369,192 @@ header>button {
     margin-top: 20px;
 }
 .sec-6-div-2 {
-    
+    width: 100vw;
+    margin: 50px 50px 80px 0px;
+    display: flex;
+    color: #f8f8f8;
+}
+.sec-6-div-2>div {
+    width: 50%;
+    margin-right: 3vw;
+    padding: 50px 30px;
+    background-color: #000000;
+    border-radius: 30px;
+}
+.name-card {
+    padding: 40px 0px;
+    line-height: 24px;
+}
+.name-card>span {
+    font-weight: 500;
+    font-size: 18px;
+}
+.comments {
+    font-size: 1.65rem;
+    line-height:2.4rem;
+}
+.sec-6-div-2>div>div>img {
+    padding-right: 5px;
+    padding-top: 25px;
+}
+.sec-6-div-2>.div-white {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(190, 190, 190);
+}
+.card-scrollbar {
+    height: 0.5rem;
+    width: 100vw;
+    background-color: rgb(190, 190, 190);
+    bborder: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: left;
+}
+.card-scrollbar>span {
+    height: 0.5rem;
+    width: 10rem;
+    background-color: #1686f0;
+    border-radius: 5px;
+}
+/* Footer */
+footer {
+    padding: 100px 100px 0px 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #000000;
+}
+footer>h1 {
+    font-size: 3rem;
+    padding: 0px 100px;
+    line-height: 4rem;
+}
+footer>form {
+    margin: 10vh 1vw;
+    background-color: #4d4d4d;
+    padding: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer>form>input {
+    font-size: 1.3rem;
+    border: none;
+    padding: 1.2rem;
+    background-color: #727272;
+    border-radius: 2rem;
+    color: #cacaca;
+}
+footer>form>input:hover {
+    background-color: #858585;
+}
+.sign-up {
+    background-color: #1686f0;
+    color: whitesmoke;
+    padding: 0px 4vw;
+}
+.sign-up:hover {
+    background-color: #1678d4;
+}
+footer>hr {
+    color: rgb(139, 139, 139);
+    margin: 0px 3vw;
+    border-top: 1px solid rgb(139, 139, 139);
+}
+footer>div {
+    padding: 5vw 3vw;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+footer>div>ul {
+    list-style-type: none;
+    padding: 0vw 5vw;
+    line-height: 2rem;
+    color: whitesmoke;
+}
+.ul-heading {
+    font-size: 1.2rem;
+    padding: 1rem 0px;
+    color: rgb(235, 235, 235);
+}
+footer>p {
+    text-align: left;
+}
+footer>p>img {
+    padding: 3vw;
+}
+/* Media Query */
+
+@media (max-width:800px) {
+    .section-1>div>h1 {
+        font-size: 36px;
+    }
+    .btn-header>button {
+        font-size: 16px;
+        padding: 10px 25px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 30px;
+        margin-top: 20px;
+    }
+    .section-2 {
+        padding: 30px 50px;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+    .section-2>img {
+        /* width: 40%; */
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+    }
+    .section-3>div>div {
+        margin: 125px 10px;
+    }
+    .section-4>h1 {
+        font-size: 50px;
+        padding: 0px;
+    }
+    .section-4>div {
+        padding: 50px 0px;
+    }
+    .sec-4-div-1>a {
+        padding: 15px 15px;
+        font-size: 20px;
+        margin-bottom: 26px;
+        width: 34vw;
+    }
+    .sec-4-div-2>ul {
+        margin: 0px 25px;
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .sec-4-div-2>ul>li {
+        margin: 10px 0px 0px;
+    }
+    .sec-6-div-1>h1 {
+        font-size: 3rem;
+    }
+    .sec-5-div-1>h1 {
+        font-size: 40px;
+        color: white;
+    }
+    .sec-5-div-1>img {
+        height: 100px;
+    }
+    .sec-5-div-2 {
+        margin-top: 100px ;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sec-5-div-2>div {
+        width: 250px;
+        margin: 3vw 1vw;
+        padding: 3vw 2vw;
+        background-color: white;
+        border-radius: 2rem;
+        /* position: relative; */
+    }
 }
