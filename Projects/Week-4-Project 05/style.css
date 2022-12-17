@@ -1,0 +1,99 @@
+* {
+    margin: 0px;
+    padding: 0px ;
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(238, 238, 238, 0.87);
+    padding: 30px 0px 30px 75px;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 10px 5px;
+}
+.logo {
+    height: 50px;
+}
+ul {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    list-style-type: none;
+}
+.list-item {
+    padding-right: 50px;
+    font-weight: 600;
+    font-size: medium;
+}
+.list-item:first-child {
+    color: green;
+    font-size: larger;
+}
+main {
+    display: flex;
+    background-image: url("./images/stethoscope.png");
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: 200px -30px;
+}
+.left-section {
+    width: 50%;
+    position: relative;
+    padding: 50px 0px ;
+}
+.top-angle {
+
+}
+h1 {
+    font-size: 68px;
+    font-weight: 900;
+}
+p {
+    padding: 40px 0px;
+    color: gray;
+}
+input {
+    border-style: none;
+    font-size: 25px;
+    color: white;
+    padding: 10px 70px;
+    border-radius: 30px;
+    background-color: rgb(61, 165, 108);
+}
+.bottomAngle {
+    position: absolute;
+    right: 40px;
+    bottom: 80px;
+}
+.right-section {
+    width: 50%;
+    display: flex;
+}
+.mouse {
+    position: absolute;
+    top: 570px;
+    right: 600px;
+}
+.doctor {
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    height: 600px;
+    z-index: 4;
+}
+.greenBox {
+    height: 450px;
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+    z-index: -2;
+}
+.yellowBox {
+    height: 380px;
+    position: absolute;
+    right: 0px;
+    bottom: 70px;
+    z-index: 3;
+}
