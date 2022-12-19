@@ -4,7 +4,7 @@
 All articles are here
 
 ## [Projects](Projects)
-Projects are here
+HTML and CSS Projects are here
 
 ## [Tailwind Projects](Tailwind-Projects)
 Tailwind projects are here      
