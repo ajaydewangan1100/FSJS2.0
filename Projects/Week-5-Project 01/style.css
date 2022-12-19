@@ -126,6 +126,10 @@ header {
     right: -250px;
     top: 130px;
 }
+.sec-1-img-right {
+    opacity: 1.5;
+    background;
+}
 /* Section-2 */
 .section-2 {
     display: flex;
@@ -316,11 +320,17 @@ header {
     margin: 10px;
     background-color: #666666;
     border-radius: 50%;
+    
 }
 .icons-4>p:first-child {
     width: 100px;
     background-color: #F63AEA;
     border-radius: 10px;
+    box-shadow: 0px 0px 40px 4px  #F63AEA;
+}
+.icons-4>p:hover {
+    background-color: #F63AEA;
+    box-shadow: 0px 0px 40px 4px  #F63AEA;
 }
 /* Section-6 */
 .section-6 {
