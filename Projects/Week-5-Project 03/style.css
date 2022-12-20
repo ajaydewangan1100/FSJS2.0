@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family:Arial, Helvetica, sans-serifgit status;
+}
+.section-1-with-header {
+    background-image: url("./Project 3- Gaming Landing Page/Assets/Photos/futuristic-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
