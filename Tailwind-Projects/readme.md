@@ -2,6 +2,7 @@
 
 ## 
 
-## 1. [Source Code- VS Code Website clone](Week-4-VS-code-clone)
+## 1. VS Code Website clone- [Source Code](Week-4-VS-code-clone)
 
-### Live VS Code Website link
+## VS Code Website Landing page- [Live Here](https://moonlit-cactus-bc7ad9.netlify.app/)
+*(Now it is not responsive)*
