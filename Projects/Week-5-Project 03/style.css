@@ -1,18 +1,324 @@
 @font-face {
     font-family: poppins;
-    src: url(./fonts/Poppins/Poppins-Medium.ttf);
-    /* src: url(./fonts/Poppins/Poppins-Light.ttf); */
+    src: url(./fonts/Poppins/Poppins-Light.ttf);
+    src: url(./fonts/Poppins/Poppins-Bold.ttf);
+    
 }
 * {
     margin: 0px;
     padding: 0px;
+    color: rgba(216, 216, 216, 0.842);
+    font-size: 12px;
 }
 body {
     font-family: poppins;
+    
 }
+/* Section-1 */
 .section-1-with-header {
-    background-image: url("./Project 3- Gaming Landing Page/Assets/Photos/futuristic-bg.png");
+    /* background-color: rgba(0, 0, 0, 0.801); */
+    background: url("./Project 3- Gaming Landing Page/Assets/Photos/futuristic-bg.png");
+    background-color: rgba(0, 0, 0, 0.527);
+    background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: bottom ;
     color: white;
+    padding: 0px 8vw;
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 0px; 
+}
+.logo-ul {
+    display: flex;
+    gap: 6vw;
+}
+.top-logo {
+    height: 45px;
+}
+.header-menu-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: baseline;
+}
+.menu-item {
+    text-decoration: none;
+    padding-left : 3vw;
+}
+.sign-in {
+    background: none;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px 2em;
+}
+.sign-in:hover {
+    background-color: rgba(153, 18, 18, 0.452);
+}
+.sign-up {
+    background-color: #f3684c;
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px 2em;
+}
+.sign-up:hover {
+    background-color: #da3f20;
+}
+/* Section-1-div */
+.section-1-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 6vw 0px;
+}
+.sec-1-left-div {
+    width: fit-content;
+}
+.sec-1-heading {
+    font-size: 44px;
+    color: white;
+    font-weight: 900;
+}
+.sec-1-para {
+    padding: 2vw 0px;
+}
+.sec-1-left-div>button {
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    background-color: #f3684c;
+    font-weight: 600;
+    margin-right: 2em;
+}
+.sec-1-left-div>.learn-more {
+    background: none;
+    border:2px solid rgba(197, 197, 197, 0.733);
+}
+.sec-1-left-div>button:hover {
+    background-color: #da3f20;
+}
+.sec-1-play-btn {
+    margin: 6vw 10vw;
+}
+.king-of {
+    display: flex;
+    margin: 1vw 0px;
+}
+.sec-1-right-para {
+    font-size: 2em;
+}
+.sec-1-dsh {
+    margin-top: 0.5em;
+    padding-right: 2vw;
+}
+.sec-1-right-arrow {
+    display: flex;
+    margin-left: 3vw;
+    align-items: flex-end;
+    padding-bottom: 0.5em;
+}
+/* Section-2 */
+.section-2 {
+    padding: 10vw 5vw;
+}
+.sec-2-heading {
+    font-size: 35px;
+    width: 600px;
+    text-align: center;
+    min-width: 340px;
+    color: black;
+    margin: 4vw auto;
+}
+.sec-2-div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.sec-2-cards {
+    height: 350px;
+    display: flex;
+    align-items: flex-end;
+    width: 20vw;
+}
+ .sec-2-card-data {
+    padding: 10px 15px;
+    /* background-color: rgba(177, 177, 177, 0.466); */
+    width: 100%;
+    backdrop-filter: blur(20px);
+    background-blend-mode: multiply;
+ }
+ .sec-2-card-data h5 {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: white;
+ }
+ .sec-2-card-data p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .sec-2-card-button {
+    padding: 10px 15px ;
+    border: none;
+    background-color: #f3684c;
+    color: white;font-size: 16px;
+    font-weight: 100;
+ }
+ .sec-2-card-button:hover {
+    background-color: #eb5334;
+ }
+ .sec-2-card-1 {
+    background: url("./Project 3- Gaming Landing Page/Assets/Photos/image 2.png");
+    background-size: cover;
+    background-position: 75%;
+ }
+ .sec-2-card-2 {
+    background: url("./Project 3- Gaming Landing Page/Assets/Photos/image\ 4.png");
+    background-size: cover;
+    background-position: 50%;
+ }
+ .sec-2-card-3 {
+    background: url("./Project 3- Gaming Landing Page/Assets/Photos/image 3.png");
+    background-size: cover;
+    background-position: 50%;
+ }
+ .sec-2-card-4 {
+    background: url("./Project 3- Gaming Landing Page/Assets/Photos/Rectangle\ 56.png");
+    background-size: cover;
+    background-position: 50%;
+ }
+ /* Section-3 */
+ .section-3 {
+    display: flex;
+    padding: 0px 5vw;
+    gap: 2vw;
+ }
+ .section-3>div {
+    width: 50%;
+    margin: 2vw;
+ }
+ .sec-3-left-div {
+    width: 500px;
+    max-width: 500px;
+    min-width: 330px;
+    height: 380px;
+    min-height: 280;
+    background-image: url("./Project 3- Gaming Landing Page/Assets/Photos/Rectangle\ 57.png");
+    background-size: cover;
+    background-position: center;
+ }
+ .sec-3-right-div {
+    align-self: center;
+ }
+ .sec-3-heading {
+    font-size: 3em;
+    font-weight: 900;
+    color: black;
+ }
+ .sec-3-para {
+    /* fon */
+    color: rgb(116, 116, 116);
+    font-weight: 100;
+    padding: 2vw 0px;
+    line-height: 24px;
+ }
+ .sec-3-btn {
+    padding: 15px 20px;
+    background-color: #f3684c;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 1.5em;
+ }
+ .sec-3-btn:hover {
+    background-color: #eb5334;
+ }
+ .sec-3-learn-more {
+    background-color: white;
+    color: #f3684c;
+    border: 1px solid #f3684c;
+    padding: 14px 20px;
+ }
+ .sec-3-learn-more:hover {
+    color: white;
+ }
+/* Section-4 */
+.section-4 {
+    /* display: flex; */
+    padding: 5vw;
+}
+.sec-4-heading-div {
+    display: flex;
+    justify-content: space-between;
+    margin: 3vw 0px;
+    /* justify-items: center; */
+}
+.sec-4-heading {
+    font-size: 40px;
+    color: black;
+    padding: 2vw;
+}
+.sec-4-arrow-div {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.sec-4-arrow {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    background-color: #f3684c;
+}
+.sec-4-left-Arrow {
+    background-color:#ffd8d0;
+}
+ .sec-4-allCard img {
+    width: 200px;
+ }
+ .sec-4-card-div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 5vw;
+    padding: 0px 2vw;
+ }
+ .sec-4-allCard {
+    display: flex;
+    gap: 3em;
+ }
+.sec-4-card-data {
+    align-self: center;
+    width: 50%;
+}
+.sec-4-card-heading {
+    font-size: 22px;
+    color: black;
+    font-weight: 100;
+    margin: 0.5em 0px;
+}
+.sec-4-card-data a {
+    color: #f7785e;
+    text-decoration: none;
+}
+.sec-4-card-data a:hover {
+    text-decoration: underline;
+}
+.sec-4-card-data p {
+    color: rgb(121, 121, 121);
+    font-weight: 100;
+    padding: 1em 0px;
+}
+.sec-4-card-btn {
+    padding: 15px 30px;
+    background-color: #f3684c;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+
+
 }
