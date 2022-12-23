@@ -2,7 +2,6 @@
     font-family: poppins;
     src: url(./fonts/Poppins/Poppins-Light.ttf);
     src: url(./fonts/Poppins/Poppins-Bold.ttf);
-    
 }
 * {
     margin: 0px;
@@ -48,6 +47,9 @@ header {
     text-decoration: none;
     padding-left : 3vw;
 }
+.menu-icon-div {
+    display: none;
+}
 .sign-in {
     background: none;
     border: none;
@@ -85,6 +87,7 @@ header {
 }
 .sec-1-para {
     padding: 2vw 0px;
+    width: 40vw;
 }
 .sec-1-left-div>button {
     padding: 15px 30px;
@@ -103,6 +106,9 @@ header {
 }
 .sec-1-play-btn {
     margin: 6vw 10vw;
+}
+.sec-1-play-btn:hover {
+    opacity: 0.7;
 }
 .king-of {
     display: flex;
@@ -223,6 +229,7 @@ header {
     /* fon */
     color: rgb(116, 116, 116);
     font-weight: 100;
+    width: 40vw;
     padding: 2vw 0px;
     line-height: 24px;
  }
@@ -233,7 +240,7 @@ header {
     color: white;
     font-size: 14px;
     font-weight: 600;
-    margin-right: 1.5em;
+    margin-right: 2.5em;
  }
  .sec-3-btn:hover {
     background-color: #eb5334;
@@ -284,6 +291,7 @@ header {
     display: grid;
     grid-template-columns: 50% 50%;
     row-gap: 5vw;
+    column-gap: 2vw;
     padding: 0px 2vw;
  }
  .sec-4-allCard {
@@ -319,6 +327,489 @@ header {
     font-size: 14px;
     font-weight: 600;
     border: none;
+}
+/* Section-5 */
+.section-5 {
+    text-align: center  ;
+    margin-top: 1vw;
+    background-color: black;
+    padding: 3vw 0px 0vw 1vw;
+}
+.sec-5-heading {
+    font-size: 40px;
+    color: white;
+    font-weight: 100;
+}
+.sec-5-lower-div {
+    display: flex;
+    gap: 4vw;
+    padding: 2vw 7vw ;
+    padding-bottom: 0px;
+    background-image: url("./Project 3- Gaming Landing Page/Assets/Icons/GAMES\ OF\ THE\ WORLD.svg");
+    background-repeat: no-repeat;
+    background-size: 65vw ;
+    background-position: 100% 33%;
+}
+.sec-5-lower-div>img {
+    min-width: 330px;
+    min-height: 390px;
+    width: 360px;
+    height: 420px;
+}
+.sec-5-lower-right {
+    width: 45vw;
+}
+.sec-5-para {
+    color: rgba(167, 167, 167, 0.822);
+    text-align: left;
+    font-weight: 100;
+    margin: 5vw 0px;
+}
+.sec-5-both-images {
+    display: flex;
+    gap: 3vw;
+    bottom: 0px;
+}
+.img-1-2 {
+    width: 280px;
+    height: 360px;
+}
+.img-22 {
+    height: 250px;
+    align-self: flex-end;
+}
+.sec-5-last-div {
+    padding: 7vw 0px ;
+    padding-bottom: 10vw;
+    margin-top: 10vw;
+    text-align: center;
+    background-image: url("./Project 3- Gaming Landing Page/Assets/Photos/Rectangle\ 606.png");
+    background-color: rgba(0, 0, 0, 0.699);
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+.sec-5-last-heading {
+    font-size: 40px;
+    color: white;
+    font-weight: 100;
+}
+.sec-5-last-div>p {
+    margin: 1vw 0px;
+    font-weight: 100;
+    color: rgb(151, 151, 151);
+}
+.sec-3-btn {
+/* previous button */
+margin: 1vw 0px;
+}
+footer {
+    display: flex;
+    padding: 5vw 8vw;
+    background-color: rgb(2, 2, 14);
+}
+.footer-logo {
+    width: 24%;
+}
+.footer-ul-div {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-logo-pic {
+    height: 3.5em;
+}
+.footer-logo>p {
+    color: rgb(126, 126, 126);
+    line-height: 2em;
+    margin: 1vw 0px;
+    font-weight: 100;
+}
+.footer-logo>a {
+    margin-right: 1vw;
+}
+.footer-logo>a>img:hover {
+    background-color: #f7785e;
+    border-radius: 50%;
+}
+.footer-all-ul {
+    list-style-type: none;
+    line-height: 3vw;
+}
+.footer-list-item {
+    font-size: 14px;
+    color: rgb(121, 121, 121);
+    text-decoration: none;
+}
+.footer-list-item:hover {
+    color: #d3d3d3;
+}
+.f-list-heading {
+    font-weight: 100;
+    font-size: 16px;
+    color: #d3d3d3;
+}
+.f-list-heading:hover {
+    color: #f7785e;
+}
+/* My Love Footer */
+.with-love-footer {
+    text-align : center ;
+    padding : 20px 0px ;
+    background-color: #000000;
+}
+
+/* Media query Started From Here -- Media query Started From Here -- Media query Started From Here -- */
+/* Media for max-width:1030px) */
+@media (max-width:1030px) {
+    .section-1-with-header {
+        padding: 0px 4vw;
+    }
+    .section-2 {
+        padding: 8vw 1vw;
+    }
+    .sec-2-heading {
+        font-size: 35px;
+        margin: 3vw auto;
+    }
+    .sec-2-cards {
+        height: 330px;
+        width: 22vw;
+    }
+     .sec-2-card-data {
+        padding: 8px 12px;
+     }
+     .sec-2-card-data h5 {
+        font-size: 1.2em;
+     }
+     .sec-2-card-button {
+        padding: 8px 12px ;
+        font-size: 14px;
+        font-weight: 600;
+     }
+     .section-3 {
+        padding: 0px 3vw;
+     }
+     .section-3>div {
+        margin: 1vw;
+     }
+     .sec-3-heading {
+        font-size: 2.6em;
+        font-weight: 900;
+        color: black;
+     }
+     .sec-3-btn {
+        margin-right: 1.5em;
+     }
+     .section-4 {
+        /* display: flex; */
+        padding: 3vw;
+    }
+    .sec-4-heading-div {
+        margin: 3vw 2vw;
+    }
+    .sec-4-heading {
+        font-size: 35px;
+    }
+     .sec-4-allCard img {
+        width: 210px;
+     }
+     .sec-4-card-div {
+        row-gap: 3vw;
+        padding: 0px 2vw;
+     }
+     .sec-4-allCard {
+        gap: 1em;
+     }
+    .sec-4-card-heading {
+        font-size: 20px;
+    }
+    .sec-4-card-data p {
+        padding: 0.9em 0px;
+    }
+    .sec-4-card-btn {
+        padding: 12px 25px;
+    }
+    .section-5 {
+        padding: 3vw 0px 0vw 1vw;
+    }
+    .sec-5-lower-div {
+        gap: 2vw;
+        padding: 2vw 4vw ;
+        background-size: 63vw ;
+        background-position: 100% 31%;
+    }
+    .sec-5-lower-div>img {
+        width: 340px;
+        height: 400px;
+    }
+    .sec-5-lower-right {
+        width: 45vw;
+    }
+    .sec-5-both-images {
+        gap: 2vw;
+    }
+    .img-1-2 {
+        width: 280px;
+        height: 350px;
+    }
+    .img-22 {
+        height: 250px;
+    }
+    .sec-5-last-div {
+        padding: 7vw 0px ;
+        margin-top: 8vw;
+    }
+    
+}
+/* Media for max-width:1030px) */
+@media (max-width:820px) {
+    .sec-1-heading {
+        font-size: 35px;
+        color: white;
+        font-weight: 900;
+    }    
+    .sec-4-allCard img {
+        width: 180px;
+     }
+     .sec-4-allCard {
+        display: flex;
+        gap: 1em;
+     }
+    .sec-4-card-heading {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .sec-4-card-data p {
+        padding: 0.8em 0px;
+    }
+    .sec-4-card-btn {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+
+    
+
+    .section-5 {
+        padding: 5vw 0px 0vw 0vw;
+    }
+    .sec-5-heading {
+        font-size: 35px;
+    }
+    .sec-5-lower-div {
+        gap: 2vw;
+        padding: 2vw 3vw ;
+        background-image: url("./Project 3- Gaming Landing Page/Assets/Icons/GAMES\ OF\ THE\ WORLD.svg");
+        background-repeat: no-repeat;
+        background-size: 60vw ;
+        background-position: 100% 30%;
+    }
+    .sec-5-lower-div>img {
+        min-width: 300px;
+        min-height: 340px;
+        width: 300px;
+        height: 360px;
+    }
+    .sssec-5-para {
+        color: rgba(167, 167, 167, 0.822);
+        text-align: left;
+        font-weight: 100;
+        margin: 5vw 0px;
+    }
+    .sec-5-both-images {
+        gap: 2vw;
+    }
+    .img-1-2 {
+        width: 210px;
+        height: 300px;
+    }
+    .img-22 {
+        height: 250px;
+    }
+    
+}
+/* Media query for max-width:430px */
+@media (max-width:430px) {
+    .section-1-with-header {
+        background-position-x: center;
+        background-position-y: bottom ;
+        padding: 0px 4vw;
+    }
+    /* Header */
+    .logo-ul {
+        width: 50%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .top-logo {
+        height: 35px;
+    }
+    .header-menu-list {
+        display: none;
+    }
+    .menu-icon-div {
+        text-align: center;
+        display:inline-block;
+    }
+    .menu-icon {
+        margin: 10px;
+    }
+    .header-btn-both {
+        display: flex;
+    }
+    .sign-in, .sign-up {
+        padding: 6px 1em;
+    }
+    .section-1-div {
+        flex-wrap: wrap;
+        padding: 4vw 0px;
+    }
+    .sec-1-left-div {
+        order: 3;
+        width: 95%;
+        margin: auto;
+    }
+    .sec-1-right-div {
+        order: 2;
+        width: 95%;
+        text-align: center;
+    }
+    .sec-1-heading {
+        font-size: 25px;
+    }
+    .sec-1-para {
+        padding: 2vw 0px;
+        width: 90vw;
+    }
+    .sec-1-left-div>button {
+        padding: 10px 25px;
+        margin-bottom: 5vw;
+    }
+    .sec-1-play-btn {
+        margin: 6vw 0px;
+    }
+    .king-of {
+        display: flex;
+    }
+    .sec-1-right-para {
+        margin: auto;
+        font-size: 1.5em;
+    }
+    .section-2 {
+        padding: 10vw 5vw;
+    }
+    .sec-2-heading {
+        font-size: 22px;
+        width: 95vw;        
+    }
+    .sec-2-cards {
+        height: 330px;
+        width: 80vw;
+        margin: 5vw auto;
+        box-shadow: 10px 10px 10px 1px black;
+    }
+    .section-3 {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5vw 5vw;
+        background-color: #ec6247;
+     }
+     .section-3>div {
+        width: 95%;
+        margin: 2vw;
+     }
+     .sec-3-left-div {
+        width: 90vw;
+        min-width: 300px;
+        height: 350px;
+        padding-top: 5vw;
+        box-shadow: 10px 10px 10px 1px black;
+     }
+     .sec-3-heading {
+        font-size: 2em;
+     }
+     .sec-3-para {
+        color: #d3d3d3;
+        width: 85vw;
+        line-height: 20px;
+     }
+     .sec-3-btn {
+        padding: 10px 15px;
+        background-color: #e78673;
+        margin-right: 1em;
+     }
+     .sec-3-learn-more {
+        background-color: white;
+        color: #f3684c;
+        padding: 10px 15px;
+     }
+     
 
 
+
+     .section-4 {
+        /* display: flex; */
+        padding: 10vw 5vw;
+    }
+    .sec-4-heading-div {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .sec-4-heading {
+        font-size: 22px;
+        color: black;
+        padding: 2vw;
+    }
+    .sec-4-arrow-div {
+        display: flex;
+        margin: auto;
+        gap: 30vw;
+    }
+    .sec-4-arrow {
+        height: 25px;
+        width: 40px;
+    }
+     .sec-4-allCard img {
+        width: 200px;
+     }
+     .sec-4-card-div {
+        display: grid;
+        margin: auto;
+        grid-template-columns: 90%;
+        row-gap: 5vw;
+     }
+     .sec-4-allCard {
+        display: flex;
+        flex-wrap: wrap;
+     }
+    .sec-4-card-data {
+        align-self: center;
+        width: 100%;
+    }
+    .sec-4-card-heading {
+        font-size: 22px;
+        color: black;
+        font-weight: 100;
+        margin: 0.5em 0px;
+    }
+    .sec-4-card-data a {
+        color: #f7785e;
+        text-decoration: none;
+    }
+    .sec-4-card-data a:hover {
+        text-decoration: underline;
+    }
+    .sec-4-card-data p {
+        color: rgb(121, 121, 121);
+        font-weight: 100;
+        padding: 1em 0px;
+    }
+    .sec-4-card-btn {
+        padding: 15px 30px;
+        background-color: #f3684c;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+    }
 }
