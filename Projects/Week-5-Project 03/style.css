@@ -328,6 +328,9 @@ header {
     font-weight: 600;
     border: none;
 }
+.sec-4-card-btn:hover {
+    background-color: #eb5334;
+}
 /* Section-5 */
 .section-5 {
     text-align: center  ;
@@ -743,22 +746,16 @@ footer {
         color: #f3684c;
         padding: 10px 15px;
      }
-     
-
-
-
      .section-4 {
-        /* display: flex; */
-        padding: 10vw 5vw;
+        padding: 5vw 4vw 10vw;
     }
     .sec-4-heading-div {
         width: 90%;
+        text-align: center;
         flex-wrap: wrap;
     }
     .sec-4-heading {
         font-size: 22px;
-        color: black;
-        padding: 2vw;
     }
     .sec-4-arrow-div {
         display: flex;
@@ -770,46 +767,142 @@ footer {
         width: 40px;
     }
      .sec-4-allCard img {
-        width: 200px;
+        width: 80vw;
+        margin: 10px auto 0px;
+        box-shadow: 10px 10px 20px 5px black;
      }
      .sec-4-card-div {
-        display: grid;
-        margin: auto;
-        grid-template-columns: 90%;
-        row-gap: 5vw;
+        display: flex;
+        flex-wrap: wrap;
      }
      .sec-4-allCard {
         display: flex;
         flex-wrap: wrap;
      }
     .sec-4-card-data {
-        align-self: center;
+        text-align: center;
         width: 100%;
     }
     .sec-4-card-heading {
-        font-size: 22px;
-        color: black;
-        font-weight: 100;
+        font-size: 20px;
+        color: #272727;
         margin: 0.5em 0px;
     }
-    .sec-4-card-data a {
-        color: #f7785e;
-        text-decoration: none;
-    }
-    .sec-4-card-data a:hover {
-        text-decoration: underline;
-    }
     .sec-4-card-data p {
-        color: rgb(121, 121, 121);
-        font-weight: 100;
-        padding: 1em 0px;
+        padding: 0.7em 0px;
+        width: 75vw;
+        margin: auto;
     }
     .sec-4-card-btn {
-        padding: 15px 30px;
-        background-color: #f3684c;
-        color: white;
+        padding: 12px 25px;
+    }
+    .section-5 {
+        text-align: center  ;
+        margin: 0vw auto;
+        padding: 3vw 0px 5vw 1vw;
+    }
+    .sec-5-heading {
+        font-size: 30px;
+        text-align: center;
+    }
+    .sec-5-lower-div {
+        display: block;
+        padding: 2vw 4vw ;
+        padding-bottom: 10px;
+        background-size: 65vw ;
+        background-position: 100% 55%;
+    }
+    .sec-5-lower-div>img {
+        margin: auto;
+        min-width: 200px;
+        min-height: 300px;
+        width: 70vw;
+        height: 90vw;
+        box-shadow: 0px 5px 15px 1px rgb(221, 221, 221);
+    }
+    .sec-5-lower-right {
+        text-align: center;
+        width: 90vw;
+    }
+    .sec-5-para {
+        text-align: center;
+        margin-bottom: 10vw;
+    }
+    .sec-5-both-images {
+        flex-wrap: wrap;
+        gap: 10vw;
+    }
+    .img-1-2 {
+        width: 300px;
+        height: 320px;
+        margin: auto;
+        box-shadow: 0px 7px 10px 1px rgb(221, 221, 221);
+    }
+    .img-22 {
+        height: 250px;
+    }
+    .sec-5-last-div {
+        padding: 2vw 0px ;
+        padding-bottom: 5vw;
+        margin-top: 15vw;
+    }
+    .sec-5-last-heading {
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .sec-5-last-div>p {
+        margin: 1vw 0px;
+        font-weight: 100;
+        color: rgb(151, 151, 151);
+    }
+    .sec-5-last-div>button {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+
+
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5vw 5vw;
+        background-color: rgb(2, 2, 14);
+    }
+    .footer-logo {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        margin-bottom: 5vw;
+    }
+    .footer-ul-div {
+        width: 100%;
+        display: flex;
+    }
+    .footer-logo-pic {
+        height: 2.5em;
+    }
+    .footer-logo>p {
+        line-height: 1.3em;
+        font-size: 10px;
+        margin: 1vw 10px;
+    }
+    .footer-logo>a>img {
+        height: 20px;
+    }
+    .footer-all-ul {
+        line-height: 5vw;
+        list-style-type: disc;
+        padding-left: 10px;
+    }
+    .footer-all-ul::first-letter {
+        list-style-type: none;
+    }
+    .footer-list-item {
+        font-size: 10px;
+    }
+    .f-list-heading {
         font-size: 14px;
-        font-weight: 600;
-        border: none;
+        text-decoration: none;
     }
 }
