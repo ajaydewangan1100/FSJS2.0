@@ -462,6 +462,12 @@ footer {
     background-color: #000000;
 }
 
+/* Scaling All images */
+img:hover, div:hover {
+    transform: scale(1.04);
+    transition-duration: 500ms;
+}
+
 /* Media query Started From Here -- Media query Started From Here -- Media query Started From Here -- */
 /* Media for max-width:1030px) */
 @media (max-width:1030px) {
