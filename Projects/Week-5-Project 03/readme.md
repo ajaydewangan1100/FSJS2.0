@@ -1,5 +1,8 @@
-# Replicate the Following Output
+# Week 5 Project 3 - Gaming Landing Page
 
-`Assests are Provided!`
+[Source Link for this project](https://github.com/ajaydewangan1100/FSJS2.0/tree/main/Projects/Week-5-Project%2003)
 
-![Project 3](./Gaming%20Landing%20Page.png)
+[Live Page Click Here](https://polite-sunburst-9b9046.netlify.app/)
+
+![My output](output.png)
+
