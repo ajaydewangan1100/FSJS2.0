@@ -5,4 +5,3 @@
 [Live Page Click Here](https://polite-sunburst-9b9046.netlify.app/)
 
 ![My output](output.png)
-
