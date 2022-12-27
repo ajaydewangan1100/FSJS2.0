@@ -582,13 +582,16 @@ footer {
 }
 /* Media for mobile -- max-width:428px */
 @media screen and (max-width:430px) {
+    .section-1 {
+        height: 60vh;
+    }
     .logo-menu {
         height: 12vh;
         flex-wrap: wrap;
     }
     .logo {
         margin: 10px;
-        height: 40px;
+        height: 25px;
     }
     .sec-1-div {
         width: 90vw;
@@ -597,17 +600,171 @@ footer {
         font-size: 30px;
     }
     .sec-1-div>p {
-        margin: 1vw 0px;
+        margin: 5vw 0px;
         font-size: 16px;
         width: 95%;
     }
     .learn-more {
         font-size: 16px;
-        padding: 10px 35px;
+        padding: 12px 35px;
         border-radius: 20px;
     }
-    /* Tomorrow */
+    .sec-1-5-logos {
+        height: max-content;
+        width: 88%;
+        border-radius: 30px;
+        gap: 15px;
+    }
+    .sec-1-5-logos img {
+        height: 25px;
+    }
+    /* section-2 */
+    .section-2 {
+        padding: 15vw auto;
+        margin-bottom: 10vh;
+    }
+    .sec-2-heading {
+        margin-top: 30px;
+        font-size: 35px;
+    }
+    .sec-2-div {
+        grid-template-columns: 90%;
+        row-gap: 10vh;
+        justify-content: center;
+        margin: 8vw auto 4vw ;
+    }
+    .sec-2-all-card {
+        margin: auto;
+        height: 80vw;           /*390px;*/
+        width: 90%; 
+        box-shadow: 0px 10px 30px 2px rgb(82, 82, 82);
+    }
+    .sec-2-upper {
+        top: 0px;
+    }
+    .sec-2-lower {
+        top: 0%;
+    }
+    .card-data-details {
+        box-shadow: 0px 10px 30px 2px rgb(82, 82, 82);
+        width: 90%;
+    }
+    /* Section-3 */
+    .section-3 {
+        padding: 8vw 0px;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        row-gap: 5vw;
+        /* position: relative; */
+    }
+    .sec-3-img-div-1 {
+        height: 350px;
+        max-width: 360px;
+    }
+    .sec-3-left-img>img {
+        width: 280px;
+        height: 280px;
+        left: 50px;
+        top: -50px;
+    }
+    .sec-3-img-div-2 {
+        height: 350px;
+        max-width: 360px;
+        right: -40px;
+    }
+    .sec-3-right-img>img {
+        width: 280px;
+        height: 280px;
+        position: relative;
+        left: 15px;
+        top: -10px;
+    }
+    .sec-3-data-div {
+        margin: auto;
+        width: 100%;
+        padding: 1vh 0px;
+    }
+    .half-div-1 {
+        margin-left: -250px;
+    }
+    .half-div-2 {
+        margin: auto;
+        width: 340px;
+    }
+    .sec-3-data-div>h1 {
+        font-size: 2.5em;
+        width: 330px;
+    }
+    .ssec-3-data-div>p {
+        margin: 2vh 0px;
+    }
+    .early-btn.same-1 {
+        font-size: 14px;
+        padding: 15px 35px;
+    }
+    /* Section-4 */
+    .sec-4-heading {
+        font-size: 1.7em;
+        width: 100%;
+        margin: 5vw auto;
+    }
+    .sec-4-para {
+        width: 90%;
+    }
+    .sec-4-input {
+        flex-direction: column;
+        margin: 3vh 0px;
+    }
+    .subscribe {
+        width: fit-content;
+        margin: 10px auto;
+        padding: 15px 40px;
+    }
+    /* Footer */
+    footer {
+        padding: 10vw;
+        padding-bottom: 5vw;
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .footer-left>img {
+        width: 100px;
+    }
+    .footer-left {
+        padding: 0vw;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .social-icons {
+        padding: 2vw 0px;
+        margin-left: 10px;
+    }
+    .social-icons img {
+        width: 35px;
+        margin-right: 10px;
+    }
+    .footer-right  {
+        text-align: center;
+        margin: auto;
+    }
+    .all-footer-ul {
+        line-height: 25px;
+    }
 }
+/* Animation */
+.footer-left:hover, h1:hover, h2:hover, .sec-1-5-logos>img:hover, .scale-1-cards-all:hover, .scale-1-cards-all>div:hover, .half-div:hover, .sec-3-data-div:hover, .scale-1-footer-icon>img:hover, .scale-1:hover {
+    transform: scale(1.04);
+    transition-duration: 500ms;
+    transform-origin: top;
+}
+
+
+
+
 
 
 
