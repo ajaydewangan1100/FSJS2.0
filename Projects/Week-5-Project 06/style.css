@@ -666,5 +666,7 @@ footer {
     }    
 
 }
-
-
+.scale-1:hover, .scale-1-img>img:hover, .scale-1-ul>ul:hover, h1:hover, h2:hover {
+    transform: scale(1.04);
+    transition-duration: 400ms;
+}
