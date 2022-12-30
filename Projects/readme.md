@@ -1,6 +1,9 @@
 # Projects Source Code Links (HTML & CSS)
 
 
+## [Week 5 Project 6 - Data Analytics Landing Page](Week-5-Project%2006)
+
+## [Week 5 Project 4 - Real Estate Landing Page](Week-5-Project%2004)
 
 ## [Week 5 Project 3 - Gaming landing page ](Week-5-Project%2003)
 ## [Week 5 Project 2 - Hosting landing page ](Week-5-project%2002)
