@@ -463,7 +463,7 @@ footer {
 }
 
 /* Scaling All images */
-img:hover, div:hover, h1:hover, h2:hover {
+img:hover, h1:hover, h2:hover {   /*div:hover*/
     transform: scale(1.04);
     transition-duration: 500ms;
 }
@@ -653,8 +653,46 @@ img:hover, div:hover, h1:hover, h2:hover {
     .top-logo {
         height: 35px;
     }
+    
     .header-menu-list {
-        display: none;
+        display: block;
+        width: 100vw;
+        position: absolute;
+        z-index: 3;
+        left: 0px;
+        top: -300px;
+        text-align: center;
+        background-color: #eb5334;
+        animation-name: clickShow_menu_1;
+        animation-duration: 700ms;
+        animation-iteration-count: 1;
+        animation-direction: reverse;
+        animation-timing-function: linear;
+    }
+    @keyframes clickShow_menu_1 {
+        from {top:-300px;}
+        to {top:50px;}
+      }
+    .clickShow {
+        left: 0px;
+        animation-name: clickShow_menu;
+        animation-duration: 700ms;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        top: 55px;
+    }
+    @keyframes clickShow_menu {
+        from {top:-300px;}
+        to {top:50px;}
+      }
+    .menu-item {
+        font-size: 20px;
+        display: block;
+        padding: 20px;
+    }
+    .menu-item:hover {
+        background-color: #da3f20;
     }
     .menu-icon-div {
         text-align: center;
