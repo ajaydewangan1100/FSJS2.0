@@ -1,5 +1,10 @@
-# Replicate the Following Output
+# Week 5 Project 6 - Data Analytics Landing Page
 
-`Assests are Provided!`
+## [Source Code Here](https://github.com/ajaydewangan1100/FSJS2.0/tree/main/Projects/Week-5-Project%2006)
 
-![Project 6](./Data%20Analytics%20Landing%20page.png)
+## [Live WebPage Here](https://earnest-liger-dd495d.netlify.app/)
+It is responsive Webpage.
+
+Output - 
+
+![Output](output.png)
