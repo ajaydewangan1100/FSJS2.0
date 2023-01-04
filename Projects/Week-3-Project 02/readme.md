@@ -1,11 +1,9 @@
 # Week-3 Project 2nd Crypto Market
 
-## [Source Code](index.html)
-Source code here
+## [Source Code Here](https://github.com/ajaydewangan1100/FSJS2.0/tree/main/Projects/Week-3-Project%2002)
 
-## [Website link](https://clinquant-cranachan-52848b.netlify.app/)
-Website for seeing
+## [Live Page link](https://clinquant-cranachan-52848b.netlify.app/)
+
 
 Output Shown
-
 ![Output](output.png)

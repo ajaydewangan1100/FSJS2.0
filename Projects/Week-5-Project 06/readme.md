@@ -6,5 +6,7 @@
 It is responsive Webpage.
 
 Output - 
-
 ![Output](output.png)
+
+Full Page Output
+![Full Page](Data%20Analytics%20Landing%20page.png)

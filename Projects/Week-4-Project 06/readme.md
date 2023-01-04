@@ -5,3 +5,6 @@ Source code here
 
 ## [Live website](https://comfy-marshmallow-ede392.netlify.app/)
 Live website here- not responsive
+
+Output
+![output](Output.png)

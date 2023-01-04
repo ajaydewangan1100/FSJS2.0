@@ -4,7 +4,11 @@
 Souurce code here
 
 ## [Live Website](https://curious-conkies-e3b2bc.netlify.app/)
-Live Website here
+Live Website here  *not responsive*
 
 
-*not responsive*
+Output
+![output](output.png)
+
+Full Landing page output
+![Full page](Credit%20card%20landing%20page.png)
