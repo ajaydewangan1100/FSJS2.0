@@ -7,25 +7,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Beats Landing Page</title>
 </head>
-<body class="bg-gray-700 text-white flex flex-col px-[15vw] ">
+<body class="bg-neutral-900 text-white flex flex-col px-[15vw] ">
     <!-- Header -->
     <header class="flex justify-between pl-[5vw]">
         <img src="./Photos/beatsLogo.png" alt="logo" class="py-10 w-7 ">
         <div class="flex align-middle gap-x-14">
             <ul class="flex align-middle m-auto text-white gap-x-12">
-                <li class="text-[14px] font-bold ppx-10">Home    </li>
-                <li class="text-[14px] font-bold ppx-10">Specs   </li>
-                <li class="text-[14px] font-bold ppx-10">Case    </li>
-                <li class="text-[14px] font-bold ppx-10">Products</li>
+                <li class="text-[14px] font-bold ppx-10 cursor-pointer">Home    </li>
+                <li class="text-[14px] font-bold ppx-10 cursor-pointer">Specs   </li>
+                <li class="text-[14px] font-bold ppx-10 cursor-pointer">Case    </li>
+                <li class="text-[14px] font-bold ppx-10 cursor-pointer">Products</li>
             </ul>
             <button class="py-[14px] px-11 bg-gray-800 m-auto rounded-md text-xs text-white font-semibold hover:bg-gray-600 animate-pulse">Shop</button>
         </div>
     </header>
-    <main class="px-[10vw]">
+    <main class="flex flex-col justify-center">
         <!-- Section-1 -->
-        <section class="w-full flex flex-row gap-x-20 bg-no-repeat bg-right-top bg-[length:320px_70px]" style="background-image:url(./Photos/onEar.png);">
+        <section class="w-[50vw] m-auto flex flex-row gap-x-20 bg-no-repeat bg-right-top bg-[length:320px_70px]" style="background-image:url(./Photos/onEar.png);">
             <div class="h-[60vh]">
-                <img src="./Photos/mainImage.png" alt="headphone_img" class="w-70 relative top-[-220px] hover:scale-90 hover:top-[-100px]">
+                <img src="./Photos/mainImage.png" alt="headphone_img" class="w-70 relative top-[-220px] hover:top-[-100px] duration-500 hover:scale-[96%]">
             </div>
             <div class="w-2/3 right-1 mt-14">
 
@@ -37,117 +37,200 @@
             </div>
         </section>
         <!-- Section-2 -->
-        <section class="flex py-4 my-5 gap-[15%]">
-            <img src="./Photos/appleLogo.png" alt="appleLogo" class="m-auto w-20 hover:scale-125 hover hover:duration-[400ms]">
-            <img src="./Photos/spotifyLogo.png" alt="spotifyLogo" class="m-auto w-20 hover:scale-125 hover:duration-[400ms]">
-            <img src="./Photos/amazonLogo.png" alt="amazonLogo" class="m-auto w-20 hover:scale-125 hover:duration-[400ms]">
-            <img src="./Photos/youtubeLogo.png" alt="youtubeLogo" class="m-auto w-20 hover:scale-125 hover:duration-[400ms]">
+        <section class="w-[50vw] mx-auto flex py-4 mt-16 gap-[15%]">
+            <img src="./Photos/appleLogo.png" alt="appleLogo" class="m-auto w-20 hover:scale-150 hover hover:duration-[400ms]">
+            <img src="./Photos/spotifyLogo.png" alt="spotifyLogo" class="m-auto w-20 hover:scale-150 hover:duration-[400ms]">
+            <img src="./Photos/amazonLogo.png" alt="amazonLogo" class="m-auto w-20 hover:scale-150 hover:duration-[400ms]">
+            <img src="./Photos/youtubeLogo.png" alt="youtubeLogo" class="m-auto w-20 hover:scale-150 hover:duration-[400ms]">
         </section>
         <!-- Section-3 -->
-        <section class="flex py-48 bg-no-repeat bg-[center_top_5rem] justify-center bg-[length:auto_60px]" style="background-image:url(./Icons/specsLogo.png) ;">
-            <div>
+        <section class="flex pt-48 pb-10 text-sm font-bold bg-no-repeat bg-[center_top_5rem] justify-center bg-[length:auto_60px]" style="background-image:url(./Icons/specsLogo.png) ;">
+            <div class="pr-16">
                 <div class="relative left-5">
                     <img src="./Icons/bluetooth.png" alt="bluetooth">
-                    <p>Connection <br/> <span>Bluetooth v5.2</span></p>
+                    <p>Connection <br/> <span class="text-xs font-thin">Bluetooth v5.2</span></p>
                 </div>
-                <div>
+                <div class="py-5">
                     <img src="./Icons/battery.png" alt="battery">
-                    <p>Battery <br/> <span>Duration 40h</span></p>
+                    <p>Battery <br/> <span class="text-xs font-thin">Duration 40h</span></p>
                 </div>
-                <div>
-                    <img src="./Icons/charger.png" alt="charger"><p>Load <br/> <span>Fast charge 4.2-AAC</span></p>
+                <div class="py-5">
+                    <img src="./Icons/charger.png" alt="charger">
+                    <p>Load <br/> <span class="text-xs font-thin">Fast charge 4.2-AAC</span></p>
                 </div>
                 <div class="relative left-5">
                     <img src="./Icons/mic.png" alt="mic">
-                    <p>Microphone <br/> <span>Supports Apple Siri <br/>and Google</span></p></div>
+                    <p>Microphone <br/> <span class="text-xs font-thin">Supports Apple Siri <br/>and Google</span></p></div>
             </div>
-            <div class="aalign-middle"><img src="./Photos/specsImage.png" alt="" class="w-56 m-auto"></div>
+            <div class="flex justify-center align-middle"><img src="./Photos/specsImage.png" alt="" class="w-64 m-auto hover:scale-125 hover:rotate-45 duration-[1500ms] "></div>
         </section>
         <!-- Section-4 -->
-        <section class="section-4">
-            <div>
-                <img src="./Photos/caseImage.png" alt="caseImage">
+        <section class="flex pt-48 text-sm font-bold bg-no-repeat bg-[center_top_4rem] justify-center bg-[length:auto_60px]" style="background-image:url(./Icons/caseLogo.png) ;">
+            <div class="pr-16 w-80 ">
+                <img src="./Photos/caseImage.png" alt="caseImage" class="animate-bounce hover:animate-none">
             </div>
-            <div>
-                <p></p>
-                <button><img src="./Icons/group.png" alt=""> More info</button>
+            <div class="w-48 font-medium leading-6 flex flex-col my-auto mt-20 text-gray-200">
+                <p>With a comfortable and adaptable case so that you can store it whenever you want, and keep your durability forever.</p>
+                <button class="py-3 px-5 flex gap-3 bg-gray-800 w-max my-10 rounded-lg text-white hover:bg-gray-600 animate-pulse"><img src="./Icons/group.png" alt="" class="w-4 h-4 m-auto"> More info</button>
             </div>
         </section>
         <!-- Section-5 -->
-        <section class="section-5">
-            <div>
-                <div>
-                    <h3>Immerse yourself in your music</h3>
-                    <p>Buy Now, up to 40% off.</p>
-                    <button><img src="./Icons/Group.svg" alt="buyNowSectionImage">Buy now</button>
+        <section>
+            <div class="my-16 py-10 mx-auto w-[60vw] relative left-[-20] bg-[#27292a] rounded-xl flex gap-16 justify-center hover:bg-[#aaa] duration-500" >
+                <div class="my-auto text-[1.4em] font-semibold">
+                    <h3 class="py-3">Immerse yourself in<br/> your music</h3>
+                    <p class="text-xs text-gray-400">Buy Now, up to 40% off.</p>
+                    <button class="py-3 px-5 gap-3 my-3 rounded-md bg-black text-xs flex hover:bg-zinc-900"><img src="./Icons/Group.svg" alt="buyNowSectionImage" class="h-4 w-4 my-auto">Buy now</button>
                 </div>
                 <div>
-                    <img src="./Photos/buyNowSectionImage.png" alt="">
+                    <img src="./Photos/buyNowSectionImage.png" alt="" class="h-48 hover:scale-125 hover:rotate-[40deg] duration-500">
                 </div>
             </div>
         </section>
         <!-- Section-6 -->
-        <section class="section-6">
-            <div>
-                <div><img src="./Photos/black.png" alt=""><div><p> <span></span></p> <img src="./Icons/Group.svg" alt="group"></div>
+        <section class="bg-no-repeat bg-top bg-[length:auto_120px] text-xs mx-auto mb-32 flex flex-wrap w-[450px] gap-14 pt-40 text-xs font-bold" style="background-image:url(./Icons/productLogo.png) ;">
+
+            <div class="flex relative justify-center mb-16">
+                <div class="w-32 h-32 bg-gray-800 bottom-[-50%] absolute rounded-lg"></div>
+                <div class="w-28 h-28 z-10 flex flex-col">
+                    <img src="./Photos/black.png" alt="" class="h-28 m-auto mb-5 hover:scale-[2.5] duration-1000">
+                    <div class="flex justify-between pb-2">
+                        <p>Black <br/><span class="font-semibold text-gray-200">N299K</span></p> <button class="my-auto mb-0">
+                        <img src="./Icons/Group.svg" alt="group" class="w-6 h-6 p-1 bg-black rounded hover:bg-[#444]"></button>
+                    </div>
                 </div>
             </div>
-            <div>
-                <div><img src="./Photos/redBlack.png" alt=""><div><p> <span></span></p> <img src="./Icons/Group.svg" alt="group"></div>
-            </div>
-            </div>
-            <div>
-                <div><img src="./Photos/nightBlack.png" alt=""><div><p> <span></span></p> <img src="./Icons/Group.svg" alt="group"></div>
+
+            <div class="flex relative justify-center mb-16">
+                <div class="w-32 h-32 bg-gray-800 bottom-[-50%] absolute rounded-lg"></div>
+                <div class="w-28 h-28 z-10 flex flex-col">
+                    <img src="./Photos/redBlack.png" alt="" class="h-28 m-auto mb-5 hover:scale-[2.5] duration-1000">
+                    <div class="flex justify-between pb-2">
+                        <p>Black <br/><span class="font-semibold text-gray-200">N299K</span></p> <button class="my-auto mb-0">
+                        <img src="./Icons/Group.svg" alt="group" class="w-6 h-6 p-1 bg-black rounded hover:bg-[#444]"></button>
+                    </div>
                 </div>
             </div>
-            <div>
-                <div><img src="./Photos/blue.png" alt=""><div><p> <span></span></p> <img src="./Icons/Group.svg" alt="group"></div>
+            <div class="flex relative justify-center mb-16">
+                <div class="w-32 h-32 bg-gray-800 bottom-[-50%] absolute rounded-lg"></div>
+                <div class="w-28 h-28 z-10 flex flex-col">
+                    <img src="./Photos/nightBlack.png" alt="" class="h-28 m-auto mb-5 hover:scale-[2.5] duration-1000">
+                    <div class="flex justify-between pb-2">
+                        <p>Black <br/><span class="font-semibold text-gray-200">N299K</span></p> <button class="my-auto mb-0">
+                        <img src="./Icons/Group.svg" alt="group" class="w-6 h-6 p-1 bg-black rounded hover:bg-[#444]"></button>
+                    </div>
                 </div>
             </div>
-            <div>
-                <div>bg</div>
-                <div><img src="./Photos/twilightGray.png" alt=""><div><p> <span></span></p> <img src="./Icons/Group.svg" alt="group"></div>
+            <div class="flex relative justify-center mb-16">
+                <div class="w-32 h-32 bg-gray-800 bottom-[-50%] absolute rounded-lg"></div>
+                <div class="w-28 h-28 z-10 flex flex-col">
+                    <img src="./Photos/blue.png" alt="" class="h-28 m-auto mb-5 hover:scale-[2.5] duration-1000">
+                    <div class="flex justify-between pb-2">
+                        <p>Black <br/><span class="font-semibold text-gray-200">N299K</span></p> <button class="my-auto mb-0">
+                        <img src="./Icons/Group.svg" alt="group" class="w-6 h-6 p-1 bg-black rounded hover:bg-[#444]"></button>
+                    </div>
                 </div>
             </div>
+            <div class="flex relative justify-center mb-16">
+                <div class="w-32 h-32 bg-gray-800 bottom-[-50%] absolute rounded-lg"></div>
+                <div class="w-28 h-28 z-10 flex flex-col">
+                    <img src="./Photos/twilightGray.png" alt="" class="h-28 m-auto mb-5 hover:scale-[2.5] duration-1000">
+                    <div class="flex justify-between pb-2">
+                        <p>Black <br/><span class="font-semibold text-gray-200">N299K</span></p> <button class="my-auto mb-0">
+                        <img src="./Icons/Group.svg" alt="group" class="w-6 h-6 p-1 bg-black rounded hover:bg-[#444]"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="flex relative justify-center">
+                <div class="w-32 h-32 bg-gray-800 bottom-0 absolute rounded-lg"></div>
+                <div class="z-10">
+                    <img src="./Photos/redBlack.png" alt="" class="h-28 mb-5">
+                    <div class="flex justify-between mb-3">
+                        <p>Black <br/><span class="font-semibold text-gray-200">N299K</span></p> <button class="my-auto mb-0">
+                        <img src="./Icons/Group.svg" alt="group" class="w-6 h-6 p-1 bg-black rounded hover:bg-[#444]"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex relative justify-center">
+                <div class="w-32 h-32 bg-gray-800 bottom-0 absolute rounded-lg"></div>
+                <div class="z-10">
+                    <img src="./Photos/nightBlack.png" alt="" class="h-28 mb-5">
+                    <div class="flex justify-between mb-3">
+                        <p>Black <br/><span class="font-semibold text-gray-200">N299K</span></p> <button class="my-auto mb-0">
+                        <img src="./Icons/Group.svg" alt="group" class="w-6 h-6 p-1 bg-black rounded hover:bg-[#444]"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex relative justify-center">
+                <div class="w-32 h-32 bg-gray-800 bottom-0 absolute rounded-lg"></div>
+                <div class="z-10">
+                    <img src="./Photos/blue.png" alt="" class="h-28 mb-5">
+                    <div class="flex justify-between mb-3">
+                        <p>Black <br/><span class="font-semibold text-gray-200">N299K</span></p> <button class="my-auto mb-0">
+                        <img src="./Icons/Group.svg" alt="group" class="w-6 h-6 p-1 bg-black rounded hover:bg-[#444]"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex relative justify-center">
+                <div class="w-32 h-32 bg-gray-800 bottom-0 absolute rounded-lg"></div>
+                <div class="z-10">
+                    <img src="./Photos/twilightGray.png" alt="" class="h-28 mb-5">
+                    <div class="flex justify-between mb-3">
+                        <p>Black <br/><span class="font-semibold text-gray-200">N299K</span></p> <button class="my-auto mb-0">
+                        <img src="./Icons/Group.svg" alt="group" class="w-6 h-6 p-1 bg-black rounded hover:bg-[#444]"></button>
+                    </div>
+                </div>
+            </div> -->
+
         </section>
     </main>
     <!-- Footer -->
-    <footer>
-        <div>
-            <img src="./Photos/beatsLogo.png" alt="beatsLogo">
-            <img src="./Icons/twitter.png" alt="beatsLogo">
+    <footer class="grid grid-cols-4 auto-cols-min sspace-x-0 mb-32 relative mx-16">
+        <div class="w-[35%] relative">
+            <a href="#"><img src="./Photos/beatsLogo.png" alt="beatsLogo" class="relative left-[100%] h-6"></a>
+            <a href="#"><img src="./Icons/twitter.png" alt="twitter logo" class="h-6 relative left-[-120%]"></a>
         </div>
-        <div>
-            <ul class="">
-            <li><a href="#" class=""> Products</a></li>
-            <li><a href="#" class=""> Headphones</a></li>
-            <li><a href="#" class=""> Earphones</a></li>
-            <li><a href="#" class=""> Earbuds</a></li>
-            <li><a href="#" class=""> Accessories</a></li>
-        </ul>
-        </div>
-        <div>
-            <ul class="">
-            <li><a href="#" class=""> Support</a></li>
-            <li><a href="#" class=""> Product help</a></li>
-            <li><a href="#" class=""> Register</a></li>
-            <li><a href="#" class=""> Updates</a></li>
-            <li><a href="#" class=""> Provides</a></li>
+        <div class="w-[15%]">
+            <ul class="text-sm leading-7 font-semibold text-gray-400">
+                <li class="mb-3 font-semibold text-xl text-white"><a href="#"> Products</a></li>
+                <li><a href="#" class=""> Headphones</a></li>
+                <li><a href="#" class=""> Earphones</a></li>
+                <li><a href="#" class=""> Earbuds</a></li>
+                <li><a href="#" class=""> Accessories</a></li>
             </ul>
         </div>
-        <div>
-            <div>
-                <input type="email" name="email" id="email">
-                <button><img src="./Icons/rightArrow.png" alt="rightArrow"> Subscribe</button>
+        <div class="w-[15%]">
+            <ul class="text-sm leading-7 font-semibold text-gray-400">
+                <li class="mb-3 font-semibold text-xl text-white"><a href="#" class=""> Support</a></li>
+                <li><a href="#" class=""> Product help</a></li>
+                <li><a href="#" class=""> Register</a></li>
+                <li><a href="#" class=""> Updates</a></li>
+                <li><a href="#" class=""> Provides</a></li>
+            </ul>
+        </div>
+        <div class="space-y-8 w-[35%]">
+
+            <div class="flex gap-2 py-1 px-3 bg-gray-800 overflow-visible w-80 rounded-lg">
+
+                <input type="email" name="email" id="email" placeholder="Email" class="w-[65%] bg-gray-800 font-semibold text-sm text-gray-200 placeholder:text-slate-400">
+                <button class="flex p-3 text-xs font-semibold gap-2 bg-black hover:bg-zinc-900 rounded-lg">
+                    <img src="./Icons/rightArrow.png" alt="rightArrow" class="h-3 my-auto"> Subscribe</button>
             </div>
-            <div>
-                <img src="./Icons/facebook.png" alt="">
-                <img src="./Icons/twitter.png" alt="">
-                <img src="./Icons/instagram.png" alt="">
-                <img src="./Icons/linkedin.png" alt="">
+
+            <div class="flex space-x-4">
+                <img src="./Icons/facebook.png" alt="" class="h-7 cursor-pointer">
+                <img src="./Icons/twitter.png" alt="" class="h-7 cursor-pointer">
+                <img src="./Icons/instagram.png" alt="" class="h-7 cursor-pointer">
+                <img src="./Icons/linkedin.png" alt="" class="h-7 cursor-pointer">
             </div>
         </div>
-        <img src="./Icons/upArrow.png" alt="upArrow">
+            <a href="#">
+                <img src="./Icons/upArrow.png" alt="upArrow" class="m-auto h-8 absolute -right-60 bottom-0">
+            </a>
     </footer>
 </body>
 </html>
