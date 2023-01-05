@@ -7,37 +7,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Beats Landing Page</title>
 </head>
-<body class="bg-neutral-900 text-white flex flex-col px-[15vw] ">
+<body class="bg-neutral-900 text-white flex flex-col px-[15vw] md:px-[5vw]">
     <!-- Header -->
     <header class="flex justify-between pl-[5vw]">
         <img src="./Photos/beatsLogo.png" alt="logo" class="py-10 w-7 ">
-        <div class="flex align-middle gap-x-14">
-            <ul class="flex align-middle m-auto text-white gap-x-12">
-                <li class="text-[14px] font-bold ppx-10 cursor-pointer">Home    </li>
-                <li class="text-[14px] font-bold ppx-10 cursor-pointer">Specs   </li>
-                <li class="text-[14px] font-bold ppx-10 cursor-pointer">Case    </li>
-                <li class="text-[14px] font-bold ppx-10 cursor-pointer">Products</li>
+        <div class="flex align-middle gap-x-14 lg:gap-x-10">
+            <ul class="flex align-middle m-auto text-white gap-x-12 lg:gap-x-8 md:gap-x-8">
+                <li class="text-[14px] font-bold cursor-pointer">Home    </li>
+                <li class="text-[14px] font-bold cursor-pointer">Specs   </li>
+                <li class="text-[14px] font-bold cursor-pointer">Case    </li>
+                <li class="text-[14px] font-bold cursor-pointer">Products</li>
             </ul>
-            <button class="py-[14px] px-11 bg-gray-800 m-auto rounded-md text-xs text-white font-semibold hover:bg-gray-600 animate-pulse">Shop</button>
+            <button class="py-[14px] px-11 bg-gray-800 m-auto rounded-md text-xs text-white font-semibold hover:bg-gray-600 animate-pulse ">Shop</button>
         </div>
     </header>
     <main class="flex flex-col justify-center">
         <!-- Section-1 -->
-        <section class="w-[50vw] m-auto flex flex-row gap-x-20 bg-no-repeat bg-right-top bg-[length:320px_70px]" style="background-image:url(./Photos/onEar.png);">
-            <div class="h-[60vh]">
-                <img src="./Photos/mainImage.png" alt="headphone_img" class="w-70 relative top-[-220px] hover:top-[-100px] duration-500 hover:scale-[96%]">
+        <section class="w-[50vw] m-auto flex gap-x-20 bg-no-repeat bg-right-top bg-[length:320px_70px] md:gap-x-12 md:w-[70vw]" style="background-image:url(./Photos/onEar.png);">
+            <div class="h-[60vh] lg:h-auto sm:h-auto">
+                <img src="./Photos/mainImage.png" alt="headphone_img" class="w-70 relative top-[-220px] hover:top-[-100px] duration-500 hover:scale-[96%] lg:top-[-180px] md:w-56">
             </div>
             <div class="w-2/3 right-1 mt-14">
 
-                <h1 class="text-5xl font-bold py-8 animate-pulse duration-[1050ms]">Beats <span class="aanimate-ping duration-[5000ms]">3</span></h1>
+                <h1 class="text-5xl font-bold py-8 animate-pulse duration-[1000ms] lg:pb-2">Beats <span class="aanimate-ping duration-[5000ms]">3</span></h1>
                 <p class="font-semibold py-4">Overview</p>
                 <p class="text-gray-400 text-sm font-semibold">Enjoy award-winning Beats sound with wireless listening freedom and a sleek, streamlined design with comfortable padded earphones, delivering first-rate playback.</p>
 
-                <button class="flex gap-x-3 align-bottom my-10 py-2 px-4 bg-gray-600 rounded-lg hover:bg-gray-800"><img src="./Icons/shoppingBag.png" alt="" class="h-4 m-auto"><p class="m-auto text-sm"> Add to Bag</p> <span class="font-bold text-md m-auto">N399K</span></button>
+                <button class="flex gap-x-3 align-bottom my-10 py-2 px-4 bg-gray-600 rounded-lg hover:bg-gray-800 md:my-8"><img src="./Icons/shoppingBag.png" alt="" class="h-4 m-auto"><p class="m-auto text-sm"> Add to Bag</p> <span class="font-bold text-md m-auto">N399K</span></button>
             </div>
         </section>
         <!-- Section-2 -->
-        <section class="w-[50vw] mx-auto flex py-4 mt-16 gap-[15%]">
+        <section class="w-[50vw] mx-auto flex py-4 mt-16 gap-[15%] lg:mt-2 lg:py-3">
             <img src="./Photos/appleLogo.png" alt="appleLogo" class="m-auto w-20 hover:scale-150 hover hover:duration-[400ms]">
             <img src="./Photos/spotifyLogo.png" alt="spotifyLogo" class="m-auto w-20 hover:scale-150 hover:duration-[400ms]">
             <img src="./Photos/amazonLogo.png" alt="amazonLogo" class="m-auto w-20 hover:scale-150 hover:duration-[400ms]">
@@ -189,30 +189,30 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer class="grid grid-cols-4 auto-cols-min sspace-x-0 mb-32 relative mx-16">
-        <div class="w-[35%] relative">
+    <footer class="grid grid-cols-[20%_20%_25%_35%] space-x-2 mb-32 relative mx-16">
+        <div class="w-[40%] relative">
             <a href="#"><img src="./Photos/beatsLogo.png" alt="beatsLogo" class="relative left-[100%] h-6"></a>
             <a href="#"><img src="./Icons/twitter.png" alt="twitter logo" class="h-6 relative left-[-120%]"></a>
         </div>
-        <div class="w-[15%]">
+        <div class="ww-[100%]">
             <ul class="text-sm leading-7 font-semibold text-gray-400">
                 <li class="mb-3 font-semibold text-xl text-white"><a href="#"> Products</a></li>
-                <li><a href="#" class=""> Headphones</a></li>
-                <li><a href="#" class=""> Earphones</a></li>
-                <li><a href="#" class=""> Earbuds</a></li>
-                <li><a href="#" class=""> Accessories</a></li>
+                <li><a href="#" class="hover:text-white"> Headphones</a></li>
+                <li><a href="#" class="hover:text-white"> Earphones</a></li>
+                <li><a href="#" class="hover:text-white"> Earbuds</a></li>
+                <li><a href="#" class="hover:text-white"> Accessories</a></li>
             </ul>
         </div>
-        <div class="w-[15%]">
+        <div class="ww-[100%]">
             <ul class="text-sm leading-7 font-semibold text-gray-400">
                 <li class="mb-3 font-semibold text-xl text-white"><a href="#" class=""> Support</a></li>
-                <li><a href="#" class=""> Product help</a></li>
-                <li><a href="#" class=""> Register</a></li>
-                <li><a href="#" class=""> Updates</a></li>
-                <li><a href="#" class=""> Provides</a></li>
+                <li><a href="#" class="hover:text-white"> Product help</a></li>
+                <li><a href="#" class="hover:text-white"> Register</a></li>
+                <li><a href="#" class="hover:text-white"> Updates</a></li>
+                <li><a href="#" class="hover:text-white"> Provides</a></li>
             </ul>
         </div>
-        <div class="space-y-8 w-[35%]">
+        <div class="space-y-8 w-[100%]">
 
             <div class="flex gap-2 py-1 px-3 bg-gray-800 overflow-visible w-80 rounded-lg">
 
@@ -229,7 +229,7 @@
             </div>
         </div>
             <a href="#">
-                <img src="./Icons/upArrow.png" alt="upArrow" class="m-auto h-8 absolute -right-60 bottom-0">
+                <img src="./Icons/upArrow.png" alt="upArrow" class="m-auto h-8 fixed right-20 bottom-28">
             </a>
     </footer>
 </body>
