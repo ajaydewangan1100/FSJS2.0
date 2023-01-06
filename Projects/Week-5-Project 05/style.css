@@ -54,21 +54,21 @@ header {
 }
 /* Main */
 main {
-    margin: 0px 25vw;
+    margin: 0px 15vw;
 }
 .section-1 {
-    margin: auto;
+    /* margin: auto; */
     display: grid;
     grid-template-columns: 45% 55%;
 }
 .sec-1-img-div {
-    width: 45%;
     position: relative;
 }
 .headphone_Img {
     width: 20em;
     position: absolute;
     top: -250px;
+    right: 50px;
     transition-duration: 400ms;
 }
 .headphone_Img:hover {
@@ -137,7 +137,7 @@ main {
 }
 /* Section-2 */
 .section-2 {
-    margin: 10vw 0px;
+    margin: 10vw 5vw;
     display: flex;
     justify-content: space-between;
     transition-duration: 300ms;
@@ -194,6 +194,7 @@ main {
 }
 .sec-3-img:hover {
     animation-name: sec-3-anim;
+    animation-iteration-count: infinite;
 }
 @keyframes sec-3-anim {
     0% { }
@@ -205,7 +206,95 @@ main {
         transform: scale(1.5, 0, 0, 1.5, 0, 0);
     }
 }
-/* Section-4 */
+/* Section-4 */ 
 .section-4 {
-    
+    background-image: url(./Icons/caseLogo.png) ;
+    background-repeat: no-repeat;
+    background-size: 180px auto;
+    background-position: top center ;
+    min-height: 70vh;
+    max-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0vw;
+}
+.section-4>div {
+    width: 35%;
+    position: relative;
+}
+.sec-4-img-div>img {
+    width: 250px;
+    margin: 15vh 0px;
+    animation-name: rotation_1;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes rotation_1 {
+    0% {}
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.sec-4-img-div>img:hover {
+    animation: none;
+}
+.sec-4-data-div>p {
+   width: 200px;
+   color: gray;
+   line-height: 2em;
+   padding: 2em 0px;
+}
+.sec-4-btn {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+}
+.sec-4-btn:hover {
+    background-color: #111;
+}
+.sec-4-btn-img {
+    height: 18px;
+    margin-right: 10px;
+}
+/* Section-5 */
+.sec-5-div-upper {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    border-radius: 10px;
+    transition: 700ms;
+    padding: 5vh 20vh;
+    gap: 5vw;
+    margin: auto;
+}
+.sec-5-div-upper:hover {
+    background-color: white;
+    animation-duration: 500ms;
+}
+.sec-5-data-div {
+}
+.sec-5-img-div>img {
+    height: 200px;
+}
+.sec-5-img-div>img:hover {
+    animation-name: 1s rotate_1 1s ;
+    animation-duration: 1000ms;
+}
+@keyframes rotate_1 {
+    0%{}
+    100%{
+        transform: rotate(45deg) scale(1.25);
+        
+    }
 }
