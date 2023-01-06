@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(100, 7, 100);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 15vw ;
+    padding: 3vw 0px;
+}
+.logo {
+    height: 25px;
+    margin-left: 5vw;
+}
+.menu_Div {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+}
+.menu_List {
+    list-style-type: none;
+    display: flex;
+    color: white;
+    gap: 3vw;
+    font-size: 1.1em;
+    font-weight: 900;
+}
+.menu_Item {
+    cursor: pointer;
+}
+.Shop_Btn {
+    font-size: 1em;
+    font-weight: 600;
+    color: whitesmoke;
+    padding: 15px 50px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.Shop_Btn:hover{
+    background-color: #111;
+}
+/* Main */
+main {
+    margin: 0px 25vw;
+}
+.section-1 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+.sec-1-img-div {
+    width: 45%;
+    position: relative;
+}
+.headphone_Img {
+    width: 20em;
+    position: absolute;
+    top: -250px;
+    transition-duration: 400ms;
+}
+.headphone_Img:hover {
+    top: -100px;
+    transform: scale(98%);
+}
+.sec-1-data-div {
+    margin-left: 1vw;
+    min-width: 55%;
+    background-image:url(./Photos/onEar.png);
+    background-repeat: no-repeat;
+    background-size: 300px 70px;
+    background-position-x: 50px;
+}
+.beats-3 {
+    font-size: 4.5em;
+    margin: 1.5em 0px 0.5em;
+    animation-name: pulse;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes pulse {
+    0% {
+        color: white;
+    }
+    50% {
+        color: rgb(63, 63, 63);
+    }
+    100% {
+        color: white;
+    }
+}
+.overview {
+    font-size: 16px;
+}
+.sec-1-para {
+    width: 80%;
+    color: rgb(185, 185, 185);
+    font-weight: 600;
+    line-height: 2em;
+    margin: 2vw 0px;
+}
+.sec-1-btn {
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    cursor: pointer;
+}
+.sec-1-btn:hover {
+    background-color: #111;
+}
+.add-to-bag {
+    font-size: 12px;
+    font-weight: 100;
+    margin: 0px 10px;
+}
+.N399K {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+/* Section-2 */
+.section-2 {
+    margin: 10vw 0px;
+    display: flex;
+    justify-content: space-between;
+    transition-duration: 300ms;
+}
+.section-2:hover{
+    transform: scale(1.1);
+}
+.section-2>img {
+    margin: auto;
+    width: 75px;
+    transition-duration: 300ms;
+}
+.section-2>img:hover{
+    transform: scale(1.4);
+}
+/* SEction-3 */
+.section-3 {
+    background-image:url(./Icons/specsLogo.png);
+    background-repeat: no-repeat;
+    background-size: 180px auto;
+    background-position: top center ;
+    min-height: 70vh;
+    max-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+}
+.sec-3-data-div>div {
+    padding: 1.5vh 0px;
+}
+.sec-3-data-div>div>img {
+    height: 20px;
+}
+.sec-3-data-div>div>p {
+    font-size: 14px;
+    font-weight: 600;
+}
+.sec-3-info {
+    font-size: 11px;
+    font-weight: 600;
+    color: grey;
+}
+.push_Me {
+    position: relative;
+    left: 1vw;
+}
+.sec-3-img-div {
+    width: 45%;
+}
+.sec-3-img {
+    width: 80%;
+    animation-duration: 2000ms;
+}
+.sec-3-img:hover {
+    animation-name: sec-3-anim;
+}
+@keyframes sec-3-anim {
+    0% { }
+    50% {
+        transform: rotate(45deg);
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        transform: scale(1.5, 0, 0, 1.5, 0, 0);
+    }
+}
+/* Section-4 */
+.section-4 {
+    
+}
