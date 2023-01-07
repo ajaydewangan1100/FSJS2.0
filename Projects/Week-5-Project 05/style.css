@@ -421,10 +421,16 @@ footer {
     font-size: 1em;
     font-weight: 600;
 }
+.footer-both-ul>li>a:hover {
+    color: white;
+}
 .footer-both-ul>li>.first-li {
     font-size: 1.25em;
     color: white;
     font-weight: 900;
+}
+.footer-both-ul>li>.first-li:hover {
+    color: red;
 }
 /* Fixed Arrow */
 .arrow-to-top {
@@ -435,4 +441,48 @@ footer {
 }
 .arrow-to-top:hover {
     transform: scale(1.2);
+}
+.footer_email_div {}
+.footer-email-upper {
+    padding: 5px;
+    width: fit-content;
+    background-color: #222;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 5px;
+}
+.footer-email-upper:hover {
+    background-color: #333;
+}
+.footer_email {
+    font-size: 12px;
+    width: 220px;
+    border-radius: 5px;
+}
+.footer-email-upper>input {
+    background-color: #222;
+    border: none;
+    color: gray;
+    font-weight: 600;
+    padding: 5px;
+    margin: auto 0px;
+}
+.subscribe {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    padding:10px 15px;
+    background-color: rgb(17, 17, 17);
+    border: none;
+    border-radius: 5px;
+}
+.subscribe>img {
+    margin: auto;
+}
+.footer_social_icon {
+    display: flex;
+    gap: 10px;
 }
