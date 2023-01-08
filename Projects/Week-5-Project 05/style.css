@@ -486,3 +486,7 @@ footer {
     display: flex;
     gap: 10px;
 }
+/* Media Query Started Here */
+@media screen and (min-width:800px) {
+    
+}
