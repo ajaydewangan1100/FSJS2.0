@@ -14,6 +14,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0px 15vw ;
     padding: 3vw 0px;
 }
@@ -42,7 +43,7 @@ header {
 
 }
 .menu_Icon {
-    /* display: none; */
+    display: none;
     cursor: pointer;
     border: none;
     background: none;
@@ -247,7 +248,7 @@ main {
     width: 250px;
     margin: 15vh 0px;
     animation-name: rotation_1;
-    animation-duration: 3000ms;
+    animation-duration: 5000ms;
     animation-iteration-count: infinite;
     animation-play-state: running;
 }
@@ -514,6 +515,14 @@ footer {
     transition-duration: 400ms;
     box-shadow: 0px 0px 5px 1px rgb(177, 177, 177);
 }
+.with-love-footer {
+    text-align : center ;
+    padding : 25px 0px ;
+}
+.with-love-footer a {
+    color: white;
+    font-weight: 600 ;
+}
 /* -------- Media Query Started Here -------- */
 /*Medai for ipad pro---- max-width:1024px */
 @media screen and (max-width:1024px) {
@@ -567,10 +576,219 @@ footer {
     .menu_List {
         display: none;
     }
-    .change{
+    .menu_Icon {
         display: block;
     }
-    .menu_Icon:active .menu_List {
+    .Shop_Btn {
+        font-size: 0.9em;
+        padding: 10px 35px;
+    }
+    main {
+        margin: 0px 5vw;
+    }
+    .section-1 {
+        /* margin: auto; */
         display: block;
+        background-image:url(./Photos/onEar.png);
+        background-repeat: no-repeat;
+        background-size: 250px 60px;
+        background-position-y: 55vw;
+        background-position-x: 10vw ;
+    }
+    .sec-1-img-div {
+        margin: -50px auto;
+        transform: rotate(-90deg);
+        width: 35vw;
+        text-align: center;
+    }
+    .headphone_Img {
+        width: 100%;
+        position: static;
+    }
+    .headphone_Img:hover {
+        width: 110%;
+    }
+    .sec-1-data-div {
+        min-width: 80%;
+        width: 95%;
+        background: none;
+        margin: auto;
+        margin-top: -50px;
+    }
+    .beats-3 {
+        font-size: 4em;
+        margin: 1.1em 0px 0.5em;
+    }
+    .overview {
+        margin: 10px 0px;
+    }
+    .sec-1-para {
+        width: 100%;
+        color: rgb(150, 150, 150);
+        font-weight: 600;
+        line-height: 1.7em;
+        margin: 5vw 0px;
+    }
+    .sec-1-btn {
+        padding: 8px 15px;
+    }
+    .add-to-bag {
+        font-size: 12px;
+        font-weight: 100;
+        margin: 0px 10px;
+    }
+    .N399K {
+        font-size: 1.1em;
+    }
+    .section-2 {
+        margin: 15vw 5vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 90px;
+    }
+    .section-2>img {
+        width: 60px;
+    }
+    .section-3 {
+        margin-top: 30vw;
+        background-size: 150px auto;
+        min-height: 55vh;
+    }
+    .sec-3-data-div>div {
+        padding: 1vh 0px;
+    }
+    .sec-3-data-div>div>img {
+        height: 15px;
+    }
+    .sec-3-data-div>div>p {
+        font-size: 14px;
+    }
+    .push_Me {
+        position: relative;
+        left: 4vw;
+    }
+    .sec-3-img-div {
+        width: 56%;
+    }
+    .sec-3-img {
+        width: 100%;
+    }
+
+
+
+    .section-4 {
+        background-size: 150px auto;
+        max-height:max-content;
+        flex-direction: column;
+        gap: 2vw;
+        padding-top: 0px;
+        width: 90%;
+        margin: 40px auto;
+    }
+    .section-4>div {
+        width: 90%;
+        position: relative;
+        margin: auto;
+    }
+    .sec-4-img-div>img {
+        width: 200px;
+        display: flex;
+        margin: 10vh auto 2vh;
+    }
+    .sec-4-data-div>p {
+    width: 100%;
+    line-height: 1.8em;
+    padding-bottom: 1.5em;
+    }
+    .sec-4-btn {
+        align-items: center;
+        padding: 12px 20px;
+    }
+    .sec-4-btn-img {
+        height: 16px;
+    }
+    .sec-5-div-upper {
+        width: min-content;
+        display: flex;
+        flex-direction: column;
+        padding: 4vh 4vh;
+        gap: 12vw;
+        margin: 80px auto;
+    }
+    .sec-5-img-div>img {
+        height: 160px;
+    }
+    .sec-5-heading {
+        font-size: 1.7em;
+    
+    }
+    .sec-5-data-div {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sec-5-para {
+        margin: 15px auto;
+        color: gray;
+    }
+    .sec-5-btn {
+        width: fit-content;
+        margin: auto;
+        font-size: 12px;
+        padding: 12px 20px;
+    }
+    .sec-5-btn-img {
+        height: 16px;
+        margin-right: 10px;
+    }
+    .section-6 {
+        background-size: 250px auto;
+        margin: 12vh 0px;
+        grid-template-columns: 120px 120px;
+        row-gap: 80px;
+        padding-top: 120px;
+    }
+    footer {
+        padding: 10vh 5vw;
+        display: grid;
+        grid-template-columns: 30% 35% 35%;
+        gap: 5vw;
+    }
+
+
+
+
+
+    
+    .footer-logo-twitter {
+        width: 100%;
+    }
+    .footer-logo>img {
+        height: 22px;
+    }
+    .twitter-logo>img {
+        height: 22px;
+    }
+    .footer-both-ul {
+        list-style-type: none;
+        line-height: 4vh;
+    }
+    .footer-both-ul>li>a {
+        font-size: 0.9em;
+    }
+    .footer-both-ul>li>.first-li {
+        font-size: 1.15em;
+    }
+    /* Fixed Arrow */
+    .arrow-to-top {
+        right: 25px;
+        bottom: 80px;
+    }
+    .footer-email-upper {
+        margin: 30px auto;
+    }
+    .subscribe {
+        padding: 8px 12px;
     }
 }
