@@ -2,7 +2,8 @@
 
 ## [Source Code Here](https://github.com/ajaydewangan1100/FSJS2.0/tree/main/Projects/Week-5-Project%2005)
 
-## Live Page Here
+## [Live Page Here](https://headphone-landing-page-full.netlify.app/)
+Fully responsive landing page
 
 Output -
 ![Output](Output.png)
