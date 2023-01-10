@@ -3,6 +3,8 @@
 
 ## [Week 5 Project 6 - Data Analytics Landing Page](Week-5-Project%2006)
 
+## [Week 5 Project 5 - Headphone Landing Page](Week-5-Project%2005)
+
 ## [Week 5 Project 4 - Real Estate Landing Page](Week-5-Project%2004)
 
 ## [Week 5 Project 3 - Gaming landing page ](Week-5-Project%2003)
