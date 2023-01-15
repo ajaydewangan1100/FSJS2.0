@@ -1,4 +1,4 @@
-// Q10 trim() Here -
+// Q10 trim() Here - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 4 > 3
 // Output = true
@@ -33,7 +33,8 @@
 4 === '4'
 // Output = false
 
-Find the length of python and jargon and make a falsy comparison statement.
+
+// Find the length of python and jargon and make a falsy comparison statement.
 console.log(`
 lenght of python -- ${"python".length} \n 
 length of jargon -- ${"jargon".length}
