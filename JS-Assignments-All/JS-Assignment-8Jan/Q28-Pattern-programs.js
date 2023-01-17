@@ -43,8 +43,12 @@ function thirdPattern(patternValue){
     let patt = [];
     for(let i = 0; i < patternValue; i++ ){
         patt = []
-        for(let j = 0; j < patternValue; j++){
-            patt.push('*')
+        for(let j = 0; j < 2*patternValue-1; j++){
+            if(j >= (patternValue-1)-i && j <= (patternValue-1)+i){
+                patt.push('*')
+            }else {
+                patt.push(' ')
+            }
         }
         console.log(...patt);
     }
