@@ -1,6 +1,6 @@
 // Q27 Prime Number 0 to 100 - - - - - - - - - - - - - - - - - - - - - - - 
 
-function primeNumbers(value){
+function primeNumbers(){
     value = 100;
     let primeArray = [1, 2];                          // [1, 2, 3, 5, 7, ]
 

@@ -6,6 +6,4 @@ let expression = '45+3-2' // String(prompt('Enter your Calculation values (eg- 4
 function evaluateExpression(expression) {
   return eval(expression);
 }
-evaluateExpression(expression);
-
-// console.log(eval('2+2'));
+console.log(evaluateExpression(expression));
