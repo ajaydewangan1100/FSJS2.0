@@ -3,7 +3,7 @@
 // This program is working for any country you want to add
 alert('This program is working for any country you want to add or found')
 
-let countries = ["USA", "Europe"]
+let countries = ["USA", "Europe"];
 
 function countryAdd(){
     let country = 'Ethiopia'
