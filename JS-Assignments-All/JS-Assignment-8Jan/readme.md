@@ -58,4 +58,4 @@
 
 ## Q.29 - [Finding Extension of file](Q29-Extension-of-file.js)
 
-## Q.30 -  [](Q30-Calculator-Program.js)
+## Q.30 -  [Calculator Program](Q30-Calculator-Program.js)
