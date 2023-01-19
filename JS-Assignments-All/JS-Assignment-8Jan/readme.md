@@ -1,4 +1,5 @@
 # JS-Assignment 8-Jan All Solutions Here
+Well worked with functions and more
 
 ## Q.1 - [variables.js](variable.js)
 
