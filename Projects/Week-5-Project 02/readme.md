@@ -6,7 +6,7 @@
 
 
 Output
-![output](output.png)
+![output](./output.png)
 
 Full Output Page
 ![Project 2](./Hosting%20Landing%20Page.png)
