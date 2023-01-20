@@ -4,6 +4,7 @@
 
 ## [Live Page Here](https://host-your-project.netlify.app/)
 
+[Contribution guidelines for this project](docs/CONTRIBUTING.md)
 
 Output
 ![output](./output.png)
