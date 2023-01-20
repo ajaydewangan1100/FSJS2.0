@@ -1,5 +1,6 @@
 # Projects Source Code Links (HTML & CSS)
 
+[Contribution guidelines for this project](docs/CONTRIBUTING.md)
 
 ## [Week 5 Project 6 - Data Analytics Landing Page](Week-5-Project%2006)
 

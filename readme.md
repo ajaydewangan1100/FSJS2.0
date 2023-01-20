@@ -1,5 +1,7 @@
 # Full Stack JavaScipt 2.0
 
+[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+
 ## [Articles](Articles)
 All articles are here
 
