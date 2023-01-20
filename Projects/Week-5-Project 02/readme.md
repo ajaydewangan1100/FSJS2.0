@@ -7,7 +7,7 @@
 [Contribution guidelines for this project](docs/CONTRIBUTING.md)
 
 Output
-![output](./output.png)
+![output](./output.png?raw=true)
 
 Full Output Page
 ![Project 2](./Hosting%20Landing%20Page.png)
