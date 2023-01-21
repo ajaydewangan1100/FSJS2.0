@@ -17,11 +17,12 @@
         body{
             height: 100%;
             width: 100%;
-            background-color: darkgreen;
+            background-color: rgb(166, 216, 166);
+            overflow: hidden;
         }
         .circle{
-            height: 30px;
-            width: 30px;
+            height: 40px;
+            width: 40px;
             border-radius: 50%;
             background-color: rgb(211, 255, 124);
             position: absolute;
@@ -34,14 +35,21 @@
         document.body.addEventListener("click", (ar) => {
             const p = document.createElement("p");
             p.classList.add("circle");
-            console.log(p)
             document.body.appendChild(p);
-            let p1 = document.getElementsByClassName("circle")[0];
-            p1.style.top = (ar.pageY - 15) + "px";
-            p1.style.left = (ar.pageX - 15) + "px";
+            p.style.top = (ar.pageY - 20) + "px";
+            p.style.left = (ar.pageX - 20) + "px";
+            // Color Generating Here
+            const abcd = "0123456789ABCDEF";
+            let color = "#";
+            for(let i = 0; i < 6; i++){
+                color += abcd.charAt(Math.floor(Math.random()*16));
+            }
+            p.style.backgroundColor = color;
+            p.style.transitionDuration = 1000 + "ms";
+            setInterval(() => {
+                p.classList.toggle("circle");
+            }, 1000);
         });
-
-        
     </script>
 </body>
 </html>
