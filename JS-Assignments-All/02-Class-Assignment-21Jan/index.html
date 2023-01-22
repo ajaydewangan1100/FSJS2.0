@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click and Create Circle</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        html{
+            height: 100vh;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(5, 51, 88);
+            overflow: hidden;
+        }
+        .circle{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: rgb(211, 255, 124);
+            position: absolute;
+        }
+        input {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            left: 20px;
+            top: 20px;
+        }
+        button {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            font-weight: 500;
+            background: none;
+            border: none;
+        }
+        p{
+            border: 1px solid white;
+        }
+        @media screen and (min-width:650px) {
+            #pp{
+            display: none;
+        }            
+        }
+        @media screen and (max-width:650px) {
+            input {
+                display: none;
+            }
+            p{
+                font-size: 18px;
+                border: 1px solid white;
+                border-radius: 50%;
+                color: white;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p id="pp">i</p>
+    <input type="color" name="color" id="color" value="#555">
+    <button onClick="window.location.reload();">&#x21bb; </button>
+    <script>
+        if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+        document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+        document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+        document.documentElement.msRequestFullscreen();
+        }
+
+        document.body.addEventListener("click", (event) => {
+            // event.stopPropagation();
+            const p = document.createElement("p");
+            p.classList.add("circle");
+            document.body.appendChild(p);
+            p.style.top = (event.pageY - 20) + "px";
+            p.style.left = (event.pageX - 20) + "px";
+
+            // Color Generating Here
+            const abcd = "0123456789ABCDEF";
+            let color = "#";
+            for(let i = 0; i < 6; i++){
+                color += abcd.charAt(Math.floor(Math.random()*16));
+            }
+            p.style.backgroundColor = color;
+            // removing element -- p
+            let allP = document.querySelectorAll("p");
+            for(let i = 0; i < allP.length; i++){
+                if(allP[i].style.opacity < 0){
+                    allP[i].remove();
+                }
+            }
+
+
+            // Setinterval for blinking and scaling
+            let scale = 1;
+            let opac = 1;
+            setInterval(() => {
+                if(!flag){
+                    p.classList.remove("circle");
+                }
+                scale += 0.05;
+                opac -= 0.008;
+                p.style.transform = `scale(${scale})`;
+                p.style.opacity = opac;
+            }, 100);
+            // Timeout for removing element
+            let flag = true;
+            // setTimeout(() => {
+            //     flag = false;
+            // }, 10000);
+        }, false);
+        
+            // Body Background Changer -- and -- input color button
+            let inputColor = document.querySelector("#color");
+            inputColor.addEventListener('input', function(event) {
+                // event.stopPropogation();
+                console.log(inputColor.value);
+                // document.body.style.backgroundColor = event.target.value;
+                document.body.style.backgroundColor = inputColor.value;
+            });
+
+            document.body.addEventListener('touchmove', function() {
+                
+                const abcd = "0123456789ABCDEF";
+                    let color = "#";
+                    for(let i = 0; i < 6; i++){
+                        color += abcd.charAt(Math.floor(Math.random()*16));
+                    }
+                    document.body.style.backgroundColor = color;
+            });
+            document.querySelector("p").addEventListener("click", function(){
+                alert(`Hello I am Ajay. \nWhen you swipe then change background color and when you click little bubble create and slowly its opacity gone.\nIn the right there is an refresh button and if this info and refresh button not work first click anywhere else then it will work.\nThankyou for visit!`)
+            })
+    </script>
+</body>
+</html>
