@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+ <style>
+	html {
+		height: 100%;
+	}
+	body {
+		height: 100%;
+	}
+	div {
+		height: 150px;
+		width: 300px;
+		background-color: #454544;
+	}
+	p {
+		font-size: 30px;
+	}
+ </style>
+
+<body>
+<h1>Learning Event Listner</h1>
+    <p id="js">Event Listner</p>
+	<div id="div1">  </div> <br/><br/>
+	<div id="div2">  </div> <br/><br/>
+	<input type="text" id="input1" name="input1"> <br/><br/>
+	<input type="text" id="input2" name="input2">
+    
+    <script>
+		let div1 = document.getElementById("div1");
+		let div2 = document.getElementById("div2");
+		let input1 = document.getElementById("input1");
+		let input2 = document.getElementById("input2");
+		
+		window.addEventListener("load", hello);
+		function hello() {
+			alert("Window Loaded >> This is load event \n And this is event assignment");
+		}
+		
+        div1.addEventListener("click", hello1)
+        function hello1() {
+            document.getElementById("js").innerText = " upper div Clicked"
+        }
+		div1.addEventListener("dblclick", hello2)
+        function hello2() {
+            document.getElementById("js").innerText = " upper div Double Clicked"
+        }
+		div1.addEventListener("mouseenter", hello3)
+        function hello3() {
+            document.getElementById("js").innerText = " upper div mouseeneter"
+        }
+		
+		div2.addEventListener("mouseleave", hello4)
+        function hello4() {
+            document.getElementById("js").innerText = " lower div mouseleave"
+        }
+		
+		
+		input1.addEventListener("keyup", hello6)
+        function hello6() {
+            document.getElementById("js").innerText = "Input1 upper field keyup";
+        }
+		input1.addEventListener("keydown", hello7)
+        function hello7() {
+            document.getElementById("js").innerText = "Input1 upper field keydown";
+        }
+		input1.addEventListener("mouseover", hello8)
+        function hello8() {
+            document.getElementById("js").innerText = "Input1 upper field moveover";
+        }
+		
+		input2.addEventListener("input", hello9) 
+        function hello9() {
+            document.getElementById("js").innerText = "Input2 lower field Input";
+        }
+		
+        /*
+        - Click
+        - dblclick
+        - mouseeneter
+        - mouseleave
+        - moveover
+        - input
+        - keydown
+        - keyup
+        - keypress
+        - onload
+        */
+
+    </script>
+</body>
+
+</html>
