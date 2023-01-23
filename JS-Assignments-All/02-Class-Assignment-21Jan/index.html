@@ -77,69 +77,65 @@
     <p id="pp">i</p>
     <input type="color" name="color" id="color" value="#555">
     <button onClick="window.location.reload();">&#x21bb; </button>
+
     <script>
-        if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-        } else if (document.documentElement.mozRequestFullScreen) {
-        document.documentElement.mozRequestFullScreen();
-        } else if (document.documentElement.webkitRequestFullscreen) {
-        document.documentElement.webkitRequestFullscreen();
-        } else if (document.documentElement.msRequestFullscreen) {
-        document.documentElement.msRequestFullscreen();
-        }
 
-        document.body.addEventListener("click", (event) => {
-            // event.stopPropagation();
-            const p = document.createElement("p");
-            p.classList.add("circle");
-            document.body.appendChild(p);
-            p.style.top = (event.pageY - 20) + "px";
-            p.style.left = (event.pageX - 20) + "px";
+        (function (){
+            document.body.addEventListener("click", (event) => {
+                // event.stopPropagation();
+                const p = document.createElement("p");
+                p.classList.add("circle");
+                document.body.appendChild(p);
+                p.style.top = (event.pageY - 20) + "px";
+                p.style.left = (event.pageX - 20) + "px";
 
-            // Color Generating Here
-            const abcd = "0123456789ABCDEF";
-            let color = "#";
-            for(let i = 0; i < 6; i++){
-                color += abcd.charAt(Math.floor(Math.random()*16));
-            }
-            p.style.backgroundColor = color;
-            // removing element -- p
-            let allP = document.querySelectorAll("p");
-            for(let i = 0; i < allP.length; i++){
-                if(allP[i].style.opacity < 0){
-                    allP[i].remove();
+                // Color Generating Here
+                const abcd = "0123456789ABCDEF";
+                let color = "#";
+                for(let i = 0; i < 6; i++){
+                    color += abcd.charAt(Math.floor(Math.random()*16));
                 }
-            }
+                p.style.backgroundColor = color;
 
-
-            // Setinterval for blinking and scaling
-            let scale = 1;
-            let opac = 1;
-            setInterval(() => {
-                if(!flag){
-                    p.classList.remove("circle");
+                // removing element -- p
+                let allP = document.querySelectorAll("p");
+                for(let i = 0; i < allP.length; i++){
+                    if(allP[i].style.opacity < 0){
+                        allP[i].remove();
+                    }
                 }
-                scale += 0.05;
-                opac -= 0.008;
-                p.style.transform = `scale(${scale})`;
-                p.style.opacity = opac;
-            }, 100);
-            // Timeout for removing element
-            let flag = true;
-            // setTimeout(() => {
-            //     flag = false;
-            // }, 10000);
-        }, false);
+
+                // Setinterval for blinking and scaling
+                let scale = 1;
+                let opac = 1;
+                setInterval(() => {
+                    if(flag){
+                        p.classList.toggle("circle");
+                    }else {
+                        p.classList.remove("circle");
+                    }
+                    scale += 0.1;
+                    opac -= 0.008;
+                    p.style.transform = `scale(${scale})`;
+                    p.style.opacity = opac;
+                }, 300);
+
+                // Timeout for removing element
+                let flag = true;
+                setTimeout(() => {
+                    flag = false;
+                }, 10000);
+            });
         
             // Body Background Changer -- and -- input color button
             let inputColor = document.querySelector("#color");
-            inputColor.addEventListener('input', function(event) {
-                // event.stopPropogation();
+            inputColor.value = "#909090";
+            inputColor.addEventListener('input', function(){
                 console.log(inputColor.value);
-                // document.body.style.backgroundColor = event.target.value;
-                document.body.style.backgroundColor = inputColor.value;
+                document.body.style.backgroundColor = event.target.value;
             });
 
+            // Event for mobile --- touchmove 
             document.body.addEventListener('touchmove', function() {
                 
                 const abcd = "0123456789ABCDEF";
@@ -149,9 +145,11 @@
                     }
                     document.body.style.backgroundColor = color;
             });
+
             document.querySelector("p").addEventListener("click", function(){
                 alert(`Hello I am Ajay. \nWhen you swipe then change background color and when you click little bubble create and slowly its opacity gone.\nIn the right there is an refresh button and if this info and refresh button not work first click anywhere else then it will work.\nThankyou for visit!`)
             })
+        })();
     </script>
 </body>
 </html>
