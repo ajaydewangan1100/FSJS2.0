@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Gradient Background </title>
+	<link rel="shortcut icon" href="./gradient.png" type="image/x-icon">
+	<style>
+		body, html {
+			height: 100%;
+			bbackground-color : rgba(100,55,80,0.4);
+		}
+		div {
+			text-align : center ;
+			padding-top : 60px ;
+		}
+		input {
+			margin : 0px 30px ;
+		}
+		p {
+			color : white ;
+			font-size : 30px ;
+			font-weight : bold ;
+			display : inline ;
+			padding : 5px 10px ;
+			margin : 0px 30px ;
+			border : 2px solid white ;
+			border-radius : 3px ;
+			background-color : white ;
+		}
+		@media screen and (max-width:600px){
+			p {
+				margin : 0px 15px ;
+			}
+		}
+	</style>
+
+  </head>
+  <body id="mybody">
+  
+	<div>
+		<input type="color" value="#ff5459" id="first"  value="#ff0000">
+		<input type="color" value="#5599ff" id="second"  value="#00ff00">
+	</div>
+	<div>
+		<p id="first_p"> L </p>
+		<p id="second_p"> Ri </p>
+	</div>
+	
+	<script>
+		(function gradient(){
+			// getting all elements needed
+			let first =  document.getElementById("first");
+			let second =  document.getElementById("second");
+			let mybody = document.getElementById("mybody");
+			
+			first.addEventListener("input" ,changer);
+			second.addEventListener("input" ,changer);
+			
+			console.log(first.value);
+			
+			function changer (){
+						
+				mybody.style.background = "linear-gradient(to right ," + first.value + "," + second.value +") ";
+							
+				document.getElementById("first_p").innerHTML = first.value ;
+				document.getElementById("first_p").style.color = first.value ;
+				document.getElementById("second_p").innerHTML = second.value ;
+				document.getElementById("second_p").style.color = second.value ;
+			}
+			changer() ;
+		})();
+	</script>
+			
+  </body>
+</html>
