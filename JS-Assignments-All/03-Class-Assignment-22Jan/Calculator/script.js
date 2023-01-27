@@ -115,7 +115,9 @@
 		let percent = typingValues.value.length-1;
 		if(typeof(Number(checkMe)) === "number"){
 			for (let percent = typingValues.value.length-1; (typingValues.value[percent] !== undefined || typingValues.value[percent] !== "NaN"); percent-- ) {
-				if(Number(typingValues.value[percent] === "NaN")){break;}
+				if(Number(typingValues.value[percent] === "NaN")){
+					break;
+				}
 			}
 			alert(typingValues.value.slice(percent));
 		}
