@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition-duration: 200ms;
+}
+body {
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cal_Div {
+    margin: auto;
+    width: 50vw;
+    min-width: 350px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    height: 390px;
+    position: relative;
+    transition-duration: 1000ms;
+    padding: 5px;
+}
+.cal_Div:hover {
+    box-shadow: 0px 0px 100px 35vw rgb(99, 99, 99);
+}
+.cal_Div:active {
+    box-shadow: 0px 0px 50px 10vw rgb(100, 52, 52);
+}
+.input_Area {
+    height: 90px;
+    width: 98%;
+    margin: 10px auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    border-radius: 10px;
+    border: 1px solid rgb(70, 70, 70);
+    box-shadow: inset 0px 0px 5px 1px rgb(146, 146, 146);
+    overflow: hidden;
+    background-color: #222;
+    text-align: right;
+}
+.showing_Values {
+    width: 100%;
+    height: 30%;
+    font-size: 0.8em;
+    color: rgb(172, 172, 172);
+    font-weight: bold;
+    padding: 10px 15px;
+}
+.typing_Values {
+    height: 70%;
+    width: 100%;
+    margin: 5px auto;
+    font-size: 2.2em;
+    color: white;
+    padding: 3%;
+    border: none;
+    overflow: hidden;
+    background: none;
+    text-align: right;
+    outline: none;
+}
+.input_Area:hover {
+    background-color: #333;
+}
+.all_Keys-div {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24% ;
+    grid-template-rows: 22% 22% 22% 22% ;
+    gap: 1%;
+    justify-content: center;
+    list-style-type: none;
+}
+.all_Btn  {
+    height: 40px;
+    width: 98%;
+    margin: 0px auto;
+    color: white;
+    font-size: 1.1em;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    list-style-type: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.all_Btn:hover {
+    background-color: #222;
+}
+.all_Btn:active {
+    height: 35px;
+    width: 90%;
+    margin: auto;
+    background-color: rgb(158, 26, 26);
+}
+.gray_btn {
+    background-color: gray;
+}
+.gray_btn:hover {
+    background-color: rgb(167, 167, 167);
+}
+.equal_btn {
+    color: black;
+    font-weight: 900;
+    background-color: rgb(116, 168, 175);
+}
+.equal_btn:hover {
+    background-color: aquamarine;
+}
+.my_Info {
+    height: 35px;
+    position: absolute;
+    bottom: 0px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    color: crimson;
+}
+.my_Info>a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+/* Media query here */
+@media screen and (max-width:810px) {
+    .typing_Values {
+        font-size: 2em;
+    }
+}
