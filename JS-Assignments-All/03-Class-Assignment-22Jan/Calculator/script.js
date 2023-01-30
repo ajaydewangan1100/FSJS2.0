@@ -11,7 +11,7 @@
 	let equalToken = false;
 	let bracesToken = 0;
 	let percentToken = true;
-	let 
+	let equaled = true;
 
 	// Loop for all buttons Eventlistener
 	for(let i = 0; i < allButtons.length; i++){
@@ -25,7 +25,7 @@
 			percentToken = true;
 		}
 
-		if (allExpression.length == 0 || equalToken == true){typingValues.value = "";}
+		if (allExpression.length == 0 || equalToken == true){typingValues.value = typingValues.value;}
 		equalToken = false;
 		
 		// Condition for All Clear
@@ -73,6 +73,7 @@
 			alert(lll);
 			typingValues.value = eval(typingValues.value);
 			equalToken = true;
+			equaled = false;
 			bracesToken = 0;
 			return
 		}
