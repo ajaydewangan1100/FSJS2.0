@@ -11,7 +11,7 @@
 	let equalToken = false;
 	let bracesToken = 0;
 	let percentToken = true;
-	let equaled = true;
+	let equaled = false;
 
 	// Loop for all buttons Eventlistener
 	for(let i = 0; i < allButtons.length; i++){
@@ -20,10 +20,14 @@
 
 	// Function for changing data 
 	function changeData(useme) {
-		if(percentToken == false){
-			typingValues.value = "";
-			percentToken = true;
+
+		if(equaled === true && typingValues.value.length > 0){
+			equaled = false;
 		}
+		// if(percentToken == false){
+		// 	typingValues.value = "";
+		// 	percentToken = true;
+		// }
 
 		if (allExpression.length == 0 || equalToken == true){typingValues.value = typingValues.value;}
 		equalToken = false;
@@ -68,12 +72,10 @@
 				typingValues.value += ")";
 			}
 			
-			let lll = eval(typingValues.value);
 			paraShow.innerHTML = typingValues.value;
-			alert(lll);
-			typingValues.value = eval(typingValues.value);
+			typingValues.value = parseInt(eval(typingValues.value));
 			equalToken = true;
-			equaled = false;
+			equaled = true;
 			bracesToken = 0;
 			return
 		}
