@@ -22,5 +22,5 @@ accordian.forEach((element) => {
     } else {
       para.style.display = "block";
     }
-  });
+  }); 
 });
