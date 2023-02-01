@@ -2,19 +2,26 @@
 // Script for Task - 7
 
 // removed duplicate courses Here
-let allElements = document.querySelectorAll(".main__languages>a");
-for(let element of allElements){
-    if(element.innerText.includes("2.0")){element.style.display = "none";}
+let useMe = "none";
+function func1(useMe){
+    // event.preventDefault();
+    let allElements = document.querySelectorAll(".main__languages>a");
+    for(let element of allElements){
+        if(element.innerText.includes("2.0")){element.style.display = useMe}
+    }
 }
+func1(useMe);
 
 
 // 
-(function(){
-    document.querySelector(".main__form-input").value = "FSJS2.0";
-    if(document.querySelector(".main__form-input").value.length > 0){
-        document.querySelector(".main__form-btn").disabled = false;
+document.querySelector(".main__form-input").value = "iNeuron";
+document.querySelector(".main__form-btn").disabled = false;
+document.querySelector("form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    // useMe = "inline";
+    // func1(useMe);
+    let allElements = document.querySelectorAll(".main__languages>a");
+    for(let element of allElements){
+        if(element.innerText.includes("2.0")){element.style.display = "inline"}
     }
-    document.querySelector(".main__form-btn").addEventListener("click", function(){
-        document.querySelector(".main__form-input").value = "";
-    })
-})();
+})
