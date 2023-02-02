@@ -183,3 +183,67 @@ code --
 ```
 
 ```
+
+
+## Task - 8 - Here
+Output Task-8 - 1st
+![Task-8 - 1st](../DOM%20P8/DOM%20P8/ass8.1-after.png)
+
+code --
+```
+let hr = document.querySelector(".hr-line");
+let h2 = document.querySelector(".new-head");
+h2.innerText = "This is custom heading";
+let p = document.querySelector(".new-p");
+p.innerText = "This is custom Paragraph under custom heading, this is DOM project";
+
+let list = document.querySelector("aside");
+list.style.overflow = "scroll";
+list.appendChild(hr);
+list.appendChild(h2);
+list.appendChild(p);
+```
+
+Output Task-8 - 2nd
+![Task-8 - 2nd](../DOM%20P8/DOM%20P8/ass8.2-after.png)
+
+code --
+```
+
+```
+
+
+utput Task-8 - 3rd
+![Task-8 - 3rd](../DOM%20P8/DOM%20P8/ass8.3-after.png)
+
+code --
+```
+let navbarToggler = document.querySelector(".navbar-toggler");
+navbarToggler.addEventListener("click", function(){
+document.querySelector("#navbarTogglerDemo01").classList.toggle("collapse");
+})
+```
+
+
+## Task - 9 - Here
+Output Task-9 - 1st
+![Task-9 - 1st](../DOM%20P9/DOM%20P9/ass9.1-after.png)
+
+code --
+```
+document.querySelector("h1").style.color = "#dc143c";
+```
+
+Output Task-9 - 1st
+![Task-9 - 2nd](../DOM%20P9/DOM%20P9/ass9.2-after.png)
+
+code --
+```
+let cart = document.querySelector(".add-to-cart");
+cart.addEventListener("mouseover",() => {  
+cart.style.backgroundColor = "#da123a";
+})
+cart.addEventListener("mouseout",() => {  
+cart.style.backgroundColor = "hsl(158, 36%, 37%)";
+})
+```
