@@ -176,12 +176,13 @@ for(let element of allElements){
 ```
 
 
-Output Task-7 - 1st
+Output Task-7 - 2nd
 ![Task-7 - 2nd](../DOM%20P7/DOM%20P7/ass7.2-after.png)
 
 code --
 ```
-
+document.querySelector(".main__form-btn").disabled = false;
+document.querySelector(".main__form-input").disabled = false;
 ```
 
 
@@ -209,7 +210,7 @@ Output Task-8 - 2nd
 
 code --
 ```
-
+document.body.style.background = "none";
 ```
 
 

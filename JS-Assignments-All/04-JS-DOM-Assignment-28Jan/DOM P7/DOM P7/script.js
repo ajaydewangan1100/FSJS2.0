@@ -3,21 +3,18 @@
 
 // removed duplicate courses Here
 let useMe = "none";
-function func1(event){
+function func1(useMe){    
     // event.preventDefault();
     let allElements = document.querySelectorAll(".main__languages>a");
     for(let element of allElements){
-        if(element.innerText.includes("2.0")){element.style.display = "none"}
+        if(element.innerText.includes("2.0")){element.style.display = useMe}
     }
 }
-func1();
+func1(useMe);
 
 
-// 
-document.querySelector(".main__form-input").value = "iNeuron";
+// submit and refresh
 document.querySelector(".main__form-btn").disabled = false;
-document.querySelector("form").addEventListener("submit", (event) => {
-    func1();
-    // event.preventDefault();
-    
-})
+document.querySelector(".main__form-input").disabled = false;
+// document.querySelector(".main__form-input").value = "iNeuron";
+
