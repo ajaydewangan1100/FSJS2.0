@@ -1,8 +1,16 @@
 
 // Task - 2 - here
+// 1st 
+let all_h3 = document.querySelectorAll("h3");
+for(let h3 of all_h3){
+  h3.style.backgroundColor = "#d9d9f7";
+}
 
+
+// 2nd 
 let parent = document.querySelector(".accordian-wrapper");
 let h3 = document.createElement("h3");
+h3.style.backgroundColor = "#d9d9f7";
 h3.innerText = "Skill";
 let p = document.createElement("p");
 p.innerText = "I posses very good command over the Full Stack Development Technologies like MERN which can be seen in my work over the github.";

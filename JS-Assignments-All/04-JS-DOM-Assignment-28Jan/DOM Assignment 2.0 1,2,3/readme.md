@@ -63,7 +63,10 @@ Output Task-2 - 1st
 
 Code --
 ```
-
+let all_h3 = document.querySelectorAll("h3");
+for(let h3 of all_h3){
+  h3.style.backgroundColor = "#d9d9f7";
+}
 ```
 
 Output Task-2 - 2nd
