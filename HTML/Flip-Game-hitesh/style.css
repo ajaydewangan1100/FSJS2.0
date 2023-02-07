@@ -1,24 +1,68 @@
-body {
-	background-color : #101010 ;
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
 }
-#container {
-	padding : 4px ;
-	margin : 40px 430px ;
-	float : center ;
-	text-align : center ;
-	vertical-align : center ;
-	overflow : auto ;
+body {
+	text-align: center;
+	padding: 10px;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+.flip_game {
+	transition-duration: 100ms;
+	color:rgb(187, 187, 187); 
+	font-weight:800;
+}
+.btn_div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn, h3, .moves_container {
+	width: 50vw;
+	max-width: 150px;
+	height: 40px;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: 'Courier New', Courier, monospace;
+	color: #00634e;
+}
+h3, .moves_container {
+	font-size: medium;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.moves_container {
+	background-color: #ebebeb;
+	margin-right: 10px;
+}
+.container {
+	width: min-content;
+	margin: auto;
+	margin-top: 25px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr ;
+	gap: 1vh ;
+	border: 4px solid #ddd;
+	border-radius: 10px;
+	padding: 5px;
 }
 
 .all_img { 
-	border : 4px solid #454545 ;
-	border-radius : 10px ;
-	height : 100px ;
-	width : 100px ;
-	background-color : yellow ;
-	float : left ;
+	border : 3px solid #b8b8b8 ;
+	border-radius : 5px ;
+	height : 20vw ;
+	width : 20vw ;
+	max-width: 100px;
+	max-height: 100px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-
-img {
-	height : 100% ;
+.under_img {
+	height: 100%;
+	width: 100%;
 }

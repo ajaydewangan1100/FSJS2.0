@@ -9,42 +9,38 @@
 
   </head>
   <body>
-  <abbr style="color:yellow; font-weight:800"><h1>Flip Game</h1></abbr>
-  <div id="container">
+  <abbr class="flip_game"><h1>Flip Game</h1></abbr>
+  <div class="container">
   
 	<div class="all_img" id="img_1"> </div>
 	<div class="all_img" id="img_2"> </div>
 	<div class="all_img" id="img_3"> </div>
 	<div class="all_img" id="img_4"> </div>
 	
-	<!-- <div class="all_img" id="img_5"> </div> -->
-	<!-- <div class="all_img" id="img_6"> </div> -->
-	<!-- <div class="all_img" id="img_7"> </div> -->
-	<!-- <div class="all_img" id="img_8"> </div> -->
+	<div class="all_img" id="img_5"> </div>
+	<div class="all_img" id="img_6"> </div>
+	<div class="all_img" id="img_7"> </div>
+	<div class="all_img" id="img_8"> </div>
+	<!--  -->
+	<div class="all_img" id="img_9"> </div>
+	<div class="all_img" id="img_10"> </div>
+	<div class="all_img" id="img_11"> </div>
+	<div class="all_img" id="img_12"> </div>
 	
-	<!-- <div class="all_img" id="img_9"> </div> -->
-	<!-- <div class="all_img" id="img_10"> </div> -->
-	<!-- <div class="all_img" id="img_11"> </div> -->
-	<!-- <div class="all_img" id="img_12"> </div> -->
-	
-	<!-- <div class="all_img" id="img_13"> </div> -->
-	<!-- <div class="all_img" id="img_14"> </div> -->
-	<!-- <div class="all_img" id="img_15"> </div> -->
-	<!-- <div class="all_img" id="img_16"> </div> -->
-	
+	<div class="all_img" id="img_13"> </div>
+	<div class="all_img" id="img_14"> </div>
+	<div class="all_img" id="img_15"> </div>
+	<div class="all_img" id="img_16"> </div>
 
 
   </div>
-	
-	
-	<script>
-		
-		let img_1 = document.getElementById("img_1");
+  <br /><br /><br />
+  	<div class="btn_div">
+		<div class="moves_container"><h3>Moves - </h3><h3 class="counter"></h3></div>
+  		<button onclick="location.reload()" class="btn">Shuffle</button>
+	</div>
 
-		let color = window.getComputedStyle(img_1).backgroundColor ;
-
-		console.log(color);
-	</script>
+	<script src="./script.js"></script>
 
   </body>
 </html>
