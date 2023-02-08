@@ -41,6 +41,14 @@ function bg_changer() {
 
 let allImages = document.querySelectorAll(".all_img");
 
+// Variable Declaration Here
+let bool = true;
+let previous;
+let current;
+let var1 = 0;
+let count = 0;
+
+
 for (let i = 0; i < allImages.length; i++) {
     const element = allImages[i];
     const img = document.createElement("img");
@@ -52,6 +60,19 @@ for (let i = 0; i < allImages.length; i++) {
 // Counting Here
 function counting(){
     count++;
+    document.querySelector(".counter").innerText = count;
+}
+
+// Listener of button
+document.querySelector(".btn").addEventListener("mousedown", shuffler);
+// function for button
+function shuffler(){
+    for (let x = 0; x < allImages.length; x++) {
+        const element = allImages[x];
+        element.firstElementChild.style.display = "block";
+    }
+    shuffle();
+    count = 0;
     document.querySelector(".counter").innerText = count;
 }
 
@@ -69,17 +90,12 @@ function shuffle(){
         }
     }
     bg_changer();
+    // count = 0;
 }
 shuffle();
 
-// Variable Declaration Here
-let bool = true;
-let previous;
-let current;
-let shuffle_var = 0;
-let var1 = 0;
-let count = 0;
 
+// Adding Eventlistener for all
 for (let xy = 0; xy < allImages.length; xy++) {
     const element = allImages[xy];
     element.firstElementChild.addEventListener("click", () => {
@@ -115,10 +131,6 @@ function success(img_selected){
         failure(img_selected);
     }else{
         var1 = 0;
-        shuffle_var++;
-        if(shuffle_var == 8){ 
-            shuffle();
-         };
     }
 }
 
@@ -128,7 +140,7 @@ function failure (img_selected){
         if(var1 >= 2){
             show_icon();
         }
-    }, 1000);
+    }, 4000);
 }
 
 // function for showing same icon
@@ -137,5 +149,6 @@ function show_icon(){
     current.firstElementChild.style.display = "block";
     var1 = 0;
 };
+
 })();
 

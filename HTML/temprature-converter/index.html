@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Temprature Converter </title>
+	<style>
+		body{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color : #000 ;
+			
+		}
+		#container {
+			border : 10px solid #ccc ;
+			border-radius: 50px;
+			padding : 40px ;
+			background-color : #41a661 ;
+			text-align : center ;
+			margin-top: 100px;
+		}
+		h1 {
+			color: #eee;
+		}
+		.under_container {
+			display : inline-block ;
+			margin : 0px auto;
+		}
+		
+		.input {
+			text-align : center ;
+			font-size : 25px ;
+			font-weight : bold ;
+			margin : 20px 20px; 
+			
+		}
+		
+		label {
+			font-size : 17px ;
+			font-weight : bolder ;
+		}
+		
+		select {
+			text-align : center ;
+			font-size : 17px ;
+			font-weight : bold ;
+			color: #333;
+		}
+		.show_formula {
+			margin: 20px auto 0px;
+			color: white;
+		}
+		@media screen and (max-width:800px){
+			.input{
+				font-size : 20px ;
+				margin: 20px auto;
+			}
+		}
+	
+	</style>
+
+
+  </head>
+  <body>
+  
+  <div id="container">
+	<h1> Temprature Converter</h1>
+	<div class="under_container">
+		<input type="number" class="input" id="input_1" value="0"><br>
+		<label><select id="select_1">
+			<option selected="1">Celcius</option>
+			<option>             Fahrenheight</option>
+			<option>             Kelvin</option>
+		</select></label>
+	</div>
+	
+	<div class="under_container">
+		<input type="number" class="input" id="input_2" value="32"><br>
+		
+		<label>
+		<select id="select_2">
+			<option>             Celcius</option>
+			<option selected="1">Fahrenheight</option>
+			<option>             Kelvin</option>
+		</select>
+		</label>
+	</div>
+	
+	<div class="show_formula">vv</div>
+	
+  </div>
+	
+	
+	<script>
+		//Getting Elements Here
+		let input_1 = document.getElementById("input_1") ;
+		let input_2 = document.getElementById("input_2") ;
+		
+		let select_1 = document.getElementById("select_1") ;
+		let select_2 = document.getElementById("select_2") ;
+		
+
+		//Var_! and Var_2 defining here
+		let var_1 = select_1.value ;
+		let var_2 = select_2.value ;
+		
+		
+		// Function for both select value not same
+		select_1.addEventListener("change", function(){   // select_1
+			if(select_1.value == select_2.value){
+				select_2.value = var_1 ;
+				var_1 = select_1.value ;
+				var_2 = select_2.value ;
+				console.log("first change and same");
+			}
+		})
+		select_2.addEventListener("change", function(){   //
+			if(select_1.value == select_2.value){
+				select_1.value = var_2 ;
+				var_1 = select_1.value ;
+				var_2 = select_2.value ;
+				console.log("second change and same");
+			}
+		})
+		
+		//Event Listener here for input
+		input_1.addEventListener("input", check_what_changes);
+		input_2.addEventListener("input", check_what_changes_2);
+		
+		
+		//Event Listener here for Selection
+		select_1.addEventListener('change',check_what_changes) ;
+		select_2.addEventListener('change',check_what_changes) ;
+		
+		
+		//Function for check float value
+		function checkFirst(val) {
+			if (!Number.isInteger(val)) {
+				return parseFloat(val.toFixed(4)) ;
+				};
+			return val ;
+		};
+		
+		
+		//function Here for checking select_1 and select_2 then print against it
+		function check_what_changes() {
+			
+			if     (select_1.value=="Celcius" && select_2.value=="Fahrenheight"){console.log("cel-to-fah(select_1.value, select_2.value)"); input_2.value = checkFirst((parseFloat(input_1.value) * 9/5) + 32);           rule(" * 9/5) + 32", false, "fh");         }
+			else if(select_1.value=="Celcius" && select_2.value=="Kelvin")      {console.log("cel-to-kel(select_1.value, select_2.value)"); input_2.value = checkFirst( parseFloat(input_1.value) + 273.15) ;             rule(" + 273.15", false, "kl", "");             }
+			else if(select_1.value=="Fahrenheight" && select_2.value=="Celcius"){console.log("fah-to-cel(select_1.value, select_2.value)"); input_2.value = checkFirst((parseFloat(input_1.value) - 32)* 5/9) ;           rule(" - 32) * 5/9", false, "cl");          }
+			else if(select_1.value=="Fahrenheight" && select_2.value=="Kelvin") {console.log("fah-to-kel(select_1.value, select_2.value)"); input_2.value = checkFirst((parseFloat(input_1.value) - 32) * 5/9 + 273.15) ; rule(" - 32) * 5/9 + 273.15", false, "kl"); }
+			else if(select_1.value=="Kelvin" && select_2.value=="Celcius")      {console.log("kel-to-cel(select_1.value, select_2.value)"); input_2.value = checkFirst( parseFloat(input_1.value) - 273.15) ;             rule(" - 273.15", false, "cl", "");            }
+			else if(select_1.value=="Kelvin" && select_2.value=="Fahrenheight") {console.log("kel-to-fah(select_1.value, select_2.value)"); input_2.value = checkFirst((parseFloat(input_1.value) - 273.15) * 9/5 + 32) ; rule(" - 273.15) * 9/5 + 32", false, "fh");   }
+		
+		};
+		
+		function check_what_changes_2() {
+			
+			if     (select_2.value=="Celcius" && select_1.value=="Fahrenheight"){console.log("cel-to-fah(select_1.value, select_2.value)"); input_1.value = checkFirst((parseFloat(input_2.value) * 9/5) + 32);           rule(" * 9/5) + 32", true, "fh");          }
+			else if(select_2.value=="Celcius" && select_1.value=="Kelvin")      {console.log("cel-to-kel(select_1.value, select_2.value)"); input_1.value = checkFirst( parseFloat(input_2.value) + 273.15) ;             rule(" + 273.15", true, "kl", "");             }
+			else if(select_2.value=="Fahrenheight" && select_1.value=="Celcius"){console.log("fah-to-cel(select_1.value, select_2.value)"); input_1.value = checkFirst((parseFloat(input_2.value) - 32)* 5/9) ;           rule(" - 32)* 5/9", true, "cl");             }
+			else if(select_2.value=="Fahrenheight" && select_1.value=="Kelvin") {console.log("fah-to-kel(select_1.value, select_2.value)"); input_1.value = checkFirst((parseFloat(input_2.value) - 32) * 5/9 + 273.15) ; rule(" - 32) * 5/9 + 273.15", true, "kl"); }
+			else if(select_2.value=="Kelvin" && select_1.value=="Celcius")      {console.log("kel-to-cel(select_1.value, select_2.value)"); input_1.value = checkFirst( parseFloat(input_2.value) - 273.15) ;             rule(" - 273.15", true, "cl", "");             }
+			else if(select_2.value=="Kelvin" && select_1.value=="Fahrenheight") {console.log("kel-to-fah(select_1.value, select_2.value)"); input_1.value = checkFirst((parseFloat(input_2.value) - 273.15) * 9/5 + 32) ; rule(" - 273.15) * 9/5 + 32", true, "fh"); }
+		};
+		
+		function rule(formula=" * 9/5) + 32", checker=false, base="fh", bracket="("){
+			let show_formula = document.querySelector(".show_formula");
+			if(!checker){
+				show_formula.innerText = `${bracket}${input_1.value} ${formula} = ${input_2.value}`;
+			}else {
+				show_formula.innerText = `${bracket}${input_2.value} ${formula} = ${input_1.value}`;
+			}
+			switch (base) {
+				case "fh":
+					show_formula.innerText += "\u00B0F";
+					break;
+				case "cl":
+					show_formula.innerText += `\u00B0C`;
+					break;
+				case "kl":
+					show_formula.innerText += "K";
+					break;
+			}
+		}
+		rule();
+		
+	</script>
+
+  </body>
+</html>
