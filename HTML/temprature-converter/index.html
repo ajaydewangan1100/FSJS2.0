@@ -8,18 +8,20 @@
 		body{
 			font-family: Arial, Helvetica, sans-serif;
 			background-color : #000 ;
-			
+			padding: 15px 0;
 		}
 		#container {
 			border : 10px solid #ccc ;
 			border-radius: 50px;
-			padding : 40px ;
+			padding : 0 40px 40px ;
 			background-color : #41a661 ;
 			text-align : center ;
 			margin-top: 100px;
 		}
 		h1 {
 			color: #eee;
+			text-align: center;
+			padding: 5px 30px;
 		}
 		.under_container {
 			display : inline-block ;
@@ -45,14 +47,56 @@
 			font-weight : bold ;
 			color: #333;
 		}
-		.show_formula {
-			margin: 20px auto 0px;
+		.formula {
+			width: 100px;
 			color: white;
+			padding: 4px 20px;
+			background-color: #0eb643;
+			font-size: 0.9em;
+			font-weight: bold;
+			margin: 0px auto;
+			border-radius: 7px;
+		}
+		.show_formula, .formula_div {
+			color: white;
+			padding: 4px 0px;
+			border-radius: 5px;
+		}
+		.formula_div {
+			margin: 20px auto 0px;
+			width: 360px;
+			display: grid;
+			flex-wrap: wrap;
+			grid-template-columns: 1fr 1fr;
+			gap: 10px;
+			justify-content: center;
+			align-items: center;
+		}
+		.show_formula {
+			width: 300px;
+			transition-duration: .3s;
+		}
+		.show_formula:hover {
+			font-weight: bolder;
+			color: #000;
+			background-color: #ffffff;
 		}
 		@media screen and (max-width:800px){
 			.input{
 				font-size : 20px ;
 				margin: 20px auto;
+			}
+			.formula_div {
+				width: 80%;
+				grid-template-columns: 1fr;
+			}
+			.formula, .show_formula {
+				margin: 10px auto 0px;
+			}
+		}
+		@media screen and (max-width:450px) {
+			h1 {
+				height: 50px;
 			}
 		}
 	
@@ -85,12 +129,35 @@
 		</label>
 	</div>
 	
-	<div class="show_formula">vv</div>
+	<div class="formula_div"><p class="formula">Formula Here</p><div class="show_formula">vv</div></div>
 	
   </div>
 	
 	
 	<script>
+		
+		// Function -- letter increase decrease -- Temprature Converter
+		function text_f(ele, time){
+			let text_value = ele.innerText;
+			let i = text_value.length ;
+			let checker = -1;
+			setInterval(() => {
+				ele.innerText = text_value.slice(0, i);
+				if (i <= 1) {
+					checker = 1;
+				}else if(i > text_value.length) {
+					checker = -1;
+				}
+				i += checker;
+			}, time);
+		};
+		// Calling text_f()
+		let temp_convet = document.querySelector("h1")
+		text_f(temp_convet, 150);
+
+		let formula_convert = document.querySelector(".formula");
+		text_f(formula_convert, 200);
+
 		//Getting Elements Here
 		let input_1 = document.getElementById("input_1") ;
 		let input_2 = document.getElementById("input_2") ;
@@ -163,12 +230,13 @@
 			else if(select_2.value=="Kelvin" && select_1.value=="Fahrenheight") {console.log("kel-to-fah(select_1.value, select_2.value)"); input_1.value = checkFirst((parseFloat(input_2.value) - 273.15) * 9/5 + 32) ; rule(" - 273.15) * 9/5 + 32", true, "fh"); }
 		};
 		
+		
 		function rule(formula=" * 9/5) + 32", checker=false, base="fh", bracket="("){
 			let show_formula = document.querySelector(".show_formula");
 			if(!checker){
-				show_formula.innerText = `${bracket}${input_1.value} ${formula} = ${input_2.value}`;
+				show_formula.innerText = `${bracket}${input_1.value} ${formula}  =  ${input_2.value}`;
 			}else {
-				show_formula.innerText = `${bracket}${input_2.value} ${formula} = ${input_1.value}`;
+				show_formula.innerText = `${bracket}${input_2.value} ${formula}  =  ${input_1.value}`;
 			}
 			switch (base) {
 				case "fh":
@@ -183,7 +251,7 @@
 			}
 		}
 		rule();
-		
+
 	</script>
 
   </body>

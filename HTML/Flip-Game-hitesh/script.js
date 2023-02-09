@@ -8,7 +8,7 @@ text_f(Text_h1, 300);
 let text_btn = document.querySelector("button");
 text_f(text_btn, 300);
 
-// Function letter increase decrease
+// Function -- letter increase decrease
 function text_f(ele, time){
     let text_value = ele.innerText;
     let i = text_value.length ;
