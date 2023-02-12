@@ -1,0 +1,73 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.btn_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vw;
+}
+.btn, .upload_btn, .start {
+    padding: 5px 10px;
+    color: white;
+    background-color: rgb(134, 134, 134);
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+.upload_btn:hover {
+    background-color: rgb(216, 216, 32);
+}
+.btn:hover {
+    background-color: rgb(39, 39, 39); 
+}
+.container {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    margin: 20px auto;
+    background-image: url("./images/output.png");
+    background-size: contain;
+    padding: 0.1vh;
+    width: 60vw;
+    height: 60vw;
+    min-width: 332px;
+    min-height: 332px;
+    max-width: 500px;
+    max-height: 500px;
+    border: 5px solid #ddd;
+}
+.boxes {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    border: 1px solid red;
+}
+.box {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.start {
+    padding: 10px 30px ;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+.start:hover {
+    background-color: green;
+}

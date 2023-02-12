@@ -24,6 +24,6 @@ document.querySelector("form").addEventListener("submit", (event) => {
         }
         
         document.querySelector(".main__form-input").value = "";
-        event.preventDefault();
+        // event.preventDefault();
     })
 
