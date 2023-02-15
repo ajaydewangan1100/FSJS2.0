@@ -12,8 +12,6 @@ let weather_type = document.querySelector("#weather_type");
 let forecast_container = document.querySelector(".forecast_container");
 
 
-
-
 for (let i = 0; i < 9; i++) {
     // const element = forecast_list[i];
     // let forecast_1 = document.cloneNode(forecast_list);
