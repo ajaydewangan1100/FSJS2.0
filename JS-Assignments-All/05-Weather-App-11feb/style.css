@@ -15,7 +15,7 @@ body {
     background-color: rgb(57, 12, 116);
     background-image: url("./assets/bg2.png");
     background-size: cover;
-    width: 50vw;
+    width: 60vw;
     min-width: 350px;
     height: 500px;
     min-height: max-content;
@@ -25,7 +25,7 @@ body {
 }
 .container {
     border: 2px solid rgb(65, 65, 65);
-    width: 50vw;
+    width: 60vw;
     min-width: 350px;
     position: absolute;
     height: 500px;
@@ -68,6 +68,7 @@ body {
 .weather_container {
     display: flex;
     justify-content: space-around;
+    align-items: baseline;
     margin: 30px auto;
     font-weight: 100;
 }
@@ -82,19 +83,22 @@ body {
     display: flex;
     justify-content: baseline;
     align-items: baseline;
-    padding: 15px;
-    height: 300px;
+    gap: 10px;
+    padding: 10px;
+    height: 45%;
 }
 .forecast_div {
     padding: 10px;
-    margin: 0 2px;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
     margin: auto;
     width: 100px;
+    /* min-width: 150px; */
+    height: 100%;
+    min-height: 100%;
 }
 .forecast_div:nth-child(n) {
     background-color: rgba(51, 51, 51, 0.123);
@@ -102,5 +106,13 @@ body {
     height: 100%;
 }
 .forecast_div:nth-child(n):hover {
-    background-color: rgba(0, 0, 0, 0.144);
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+/* Media here */
+@media screen and (max-width:820px) {
+    .blurred, .container {
+        width: 95vw;
+        
+    }
 }
