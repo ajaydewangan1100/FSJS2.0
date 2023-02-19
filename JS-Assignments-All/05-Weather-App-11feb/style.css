@@ -78,20 +78,23 @@ body {
 }
 .forecast_container {
     overflow-x: auto;
+    overflow-y: hidden;
     display: flex;
     justify-content: baseline;
     align-items: baseline;
     padding: 15px;
+    height: 300px;
 }
 .forecast_div {
     padding: 10px;
     margin: 0 2px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     margin: auto;
+    width: 100px;
 }
 .forecast_div:nth-child(n) {
     background-color: rgba(51, 51, 51, 0.123);
