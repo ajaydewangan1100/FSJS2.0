@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="blurred"></div>
+    <div class="container">
+        <h2 class="heading">Weather Web App</h2>
+
+        <form onsubmit="show(event)" class="search_container">
+            <input type="text" name="input" class="input" id="input" placeholder="Type City Here" value="New-Delhi">
+            <button type="submit" class="search">Search</button>
+        </form>
+
+        <div class="city_info_container">
+            <div>
+                <h4>Country Name</h4>
+                <h4 id="country">__</h4>
+            </div>
+            <div>
+                <h4>State Name</h4>
+                <h4 id="state">__</h4>
+            </div>
+            <div>
+                <h4>City Name</h4>
+                <h4 id="city">__</h4>
+            </div>
+        </div>
+
+        <div class="weather_container">
+            <div>
+                <h4>Humidity</h4>
+                <h4 id="humidity">--</h4>
+            </div>
+            <div>
+                <h4>Wind Speed</h4>
+                <h4 id="Wind_speed">--</h4>
+            </div>
+            <div>
+                <h4>Temp.</h4>
+                <h4 id="temprature">--</h4>
+            </div>
+            <div>
+                <img src="" alt="_Icon" id="weather_icon">
+                <h4 id="weather_type">--</h4>
+            </div>
+        </div>
+        
+        <hr>
+        <h5 class="forecast_heading">14 Days Forecast</h5>
+        <hr>
+        <div class="forecast_container">
+            <div class="forecast_div">
+                <h5 id="day">Today</h5>
+                <h5 id="date">01/01/2020</h5>
+                <img src="" alt="Weather-Icon">
+                <h5 id="min_temp">10*</h5>
+                <h5 id="max_temp">25*</h5>
+                <h5 id="wind_speed_all">10km/h</h5>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

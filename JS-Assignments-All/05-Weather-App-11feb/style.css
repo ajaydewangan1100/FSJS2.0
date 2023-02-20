@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: rgb(177, 177, 177);
+}
+.blurred {
+    background-color: rgb(58, 13, 116);
+    background-image: url("./assets/bg2.png");
+    background-size: cover;
+    width: 50vw;
+    min-width: 350px;
+    height: 500px;
+    min-height: max-content;
+    min-height: inherit;
+    max-height: 600px;
+    filter: blur(4px);
+}
+.container {
+    border: 2px solid rgb(65, 65, 65);
+    width: 50vw;
+    min-width: 350px;
+    position: absolute;
+    height: 500px;
+    min-height: max-content;
+    max-height: 600px;
+    background-color: rgba(43, 43, 43, 0.575);
+    border-radius: 5px;
+}
+.heading {
+    margin: 5px auto;
+}
+.search_container {
+    width: 100%;
+    margin: 20px auto;
+}
+.input {
+    width: 40%;
+    min-width: 200px;
+    padding-left: 10px;
+    background-color: rgb(218, 218, 218);
+    color: rgb(99, 99, 99);
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.search {
+    color: whitesmoke;
+    font-weight: 600;
+    background-color: #4e779f;
+    padding: 2px 20px;
+    border: none;
+    border-radius: 5px;
+}
+.search:hover {
+    background-color: #0f58a0;
+}
+.city_info_container {
+    display: flex;
+    justify-content: space-around;
+}
+.weather_container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+    font-weight: 100;
+}
+.forecast_heading {
+    display: flex;
+    margin-left: 3%;
+    color: rgb(212, 212, 212);
+}
+.forecast_container {
+    overflow-x: auto;
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    padding: 15px;
+}
+.forecast_div {
+    padding: 10px;
+    margin: 0 2px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: auto;
+}
+.forecast_div:nth-child(n) {
+    background-color: rgba(53, 53, 53, 0.123);
+    border-radius: 10px;
+    height: 100%;
+}
+.forecast_div:nth-child(n):hover {
+    background-color: rgba(0, 0, 0, 0.123);
+}
