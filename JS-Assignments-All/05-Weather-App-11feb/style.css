@@ -59,7 +59,8 @@ body {
     border-radius: 5px;
 }
 .search:hover {
-    background-color: #0f58a0;
+    background-color: #083f77;
+    cursor: pointer;
 }
 .city_info_container {
     display: flex;
