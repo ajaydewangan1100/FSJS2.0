@@ -1,5 +1,6 @@
 
 setInterval(() => {
+    
     const timeIs = new Date();
     
     document.getElementsByClassName("second")[0].style.transform = "rotate(" + timeIs.getSeconds() * 6 + "deg)";
