@@ -41,6 +41,7 @@ function bg_changer() {
 
 let allImages = document.querySelectorAll(".all_img");
 
+
 // Variable Declaration Here
 let bool = true;
 let previous;
