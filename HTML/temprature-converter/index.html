@@ -173,7 +173,7 @@
 		let select_2 = document.getElementById("select_2") ;
 		
 
-		//Var_! and Var_2 defining here
+		//Var_1 and Var_2 defining here
 		let var_1 = select_1.value ;
 		let var_2 = select_2.value ;
 		
@@ -187,6 +187,7 @@
 				console.log("first change and same");
 			}
 		})
+		
 		select_2.addEventListener("change", function(){   //
 			if(select_1.value == select_2.value){
 				select_1.value = var_2 ;
