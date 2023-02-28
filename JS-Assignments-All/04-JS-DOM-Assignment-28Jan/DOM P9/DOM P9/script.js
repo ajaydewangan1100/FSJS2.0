@@ -4,6 +4,7 @@
 // Task - 1
 document.querySelector("h1").style.color = "#dc143c";
 
+
 // Task - 2
 let cart = document.querySelector(".add-to-cart");
 cart.addEventListener("mouseover",() => {  
