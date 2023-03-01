@@ -1,0 +1,166 @@
+
+.banner-main {
+    width: 100%;
+}
+.sec2-main {
+    padding: 7vw 0;
+}
+.pure-hardwork-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .pure-hardwork {
+    font-size: 3rem;
+    color: #5a4bda;
+} */
+.line-yellow2 {
+    border: 2px solid rgb(255, 153, 0);
+    max-width: 15vw;
+    min-width: 15vw;
+    margin: 10px 0;
+}
+.sec2-card-main {
+    margin: 5vw 2vw 0;
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+    font-size: 18px;
+}
+.sec2-card-img {
+    width: 12vw;
+}
+.sec2-card-count {
+    margin: 2vw 0;
+    color: rgba(18, 18, 18, 0.964);
+}
+.sec2-card-heading {
+    color: gray;
+}
+.sec3-main {
+    background-color: #eaecef;
+    padding: 7vw 0;
+}
+.sec3-comapny-icon {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+    margin-top: 5%;
+}
+.company-icon {
+    min-width: 150px;
+    max-width: 200px;
+    margin: auto;
+    padding: 50px 0;
+}
+/* Section 4 */
+.sec4-container-main {
+    text-align: center;
+    padding: 6vw 0;
+}
+.sec4-cards-main {
+    margin-top: 5vw;
+    display: flex;
+    grid-template-columns: 30vw 30vw 30vw;
+    justify-content: center;
+}
+.sec4-card {
+    min-width: 30vw;
+    max-width: 30vw;
+    padding: 2vw 1.5vw;
+    margin: 0 1vw;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px gray;
+}
+.sec4-card-img {
+    border-radius: 50%;
+    width: 120px;
+    margin: 1vw;
+}
+.sec4-card-about {
+    max-height: 200px;
+    overflow: hidden;
+    color: gray;
+}
+.sec4-card-design {
+    width: 80%;
+    margin: 2vw;
+    color: gray;
+}
+.card4-linkedin {
+    margin: 1vw 0;
+    font-size: 28px;
+}
+/* section 5 */
+.sec5-container-main {
+    text-align: center;
+    padding: 5vw 0;
+}
+.sec5-heding-para {
+    color: gray;
+    margin: 15px 0;
+}
+.sec5-cards-main {
+    margin: 2vw 0 1vw;
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw ;
+    justify-content: center;
+    text-align: left;
+}
+.sec5-card {
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(199, 199, 199);
+    margin: 0.5vw;
+}
+.sec5-card-heading {
+    color: #5a4bda;
+    margin: 10px 0;
+}
+.sec5-card-img {
+    width: 100%;
+}
+.sec-5-name-price {
+    color: rgb(21, 21, 21);
+    margin: 2vw 0;
+}
+.sec5-card-name {
+    padding: 20px 0;
+    color: rgb(41, 41, 41);
+    font-size: 16px;
+}
+/* Section 8 */
+.sec8-container-main {
+    text-align: center;
+}
+.sec8-cards-main {
+    margin: 2.5vw 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    justify-content: center;
+    gap: 8%;
+    text-align: center;
+    align-items: center;
+}
+.sec8-card {
+    text-decoration: none;
+}
+.sec8-card-icon {
+    min-width: 140px;
+}
+.sec8-card-heading {
+    margin: 2.5vw 0;
+    color: #101010;
+}
+.sec8-cards-main>* {
+    margin: 3vw 0;
+    width: 25%;
+}
+.sec8-card-desc {
+    color: gray;
+    margin: 2vw 0;
+    font-size: 20px;
+    max-width: 350px;
+    margin: auto;
+}

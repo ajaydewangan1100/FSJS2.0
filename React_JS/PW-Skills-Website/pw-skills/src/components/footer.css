@@ -1,0 +1,61 @@
+
+/* Footer CSS */
+.footer {
+    background-color: #1b2124;
+    color: white;
+    padding: 5vw 5vw 2vw;
+    display: grid;
+    grid-template-columns: 1.1fr 1.1fr 0.8fr;
+    justify-content: space-between;
+  }
+  .footer > div {
+    padding: 2vw;
+    min-width: 250px;
+    max-width: 300px;
+  }
+  .footer-logo {
+    width: 130px;
+  }
+  .ftr-email-sec {
+    display: flex;
+    padding: 2.2vw 1vw;
+    gap: 2vw;
+  }
+  .foot-email {
+    margin-bottom: 1.5vh;
+  }
+  .social-icon-footer {
+    padding: 0 10px;
+    display: flex;
+    font-size: 24px;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .social-icon-footer > i:hover {
+    color: orange;
+  }
+  .certified-div-ft {
+    width: fit-content;
+    text-align: center;
+  }
+  .certified-footer {
+    margin: 50px 0 10px;
+    padding: 0 10px;
+    width: 110px;
+  }
+  .line-yellow {
+    border: 1px solid rgb(255, 153, 0);
+    width: 70%;
+    margin: 25px 0;
+  }
+  table {
+    height: 200px;
+    width: 300px;
+    font-size: 20px;
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+  .products-ul {
+    list-style-type: none;
+    line-height: 40px;
+  }

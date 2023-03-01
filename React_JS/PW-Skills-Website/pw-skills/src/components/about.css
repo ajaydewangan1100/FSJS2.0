@@ -1,0 +1,70 @@
+
+
+.about-banner {
+    width: 100%;
+    height: 33vw;
+    background-image: url(../assets_PW/hero3.png);
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    padding: 2vw 5vw;
+}
+.banner-data {
+    color: whitesmoke;
+    width: 45%;
+}
+.banner-heading {
+    font-size: 3.5rem;
+    margin: 2.5vw 0;
+}
+.banner-data>p {
+    line-height: 28px;
+}
+.sec1-about {
+    padding: 6vw 5vw;
+    text-align: center;
+}
+.sec1-para-about {
+    color: rgb(60, 60, 60);
+    font-size: 20px;
+    width: 75%;
+    margin: 4vw auto;
+    line-height: 30px;
+}
+.sec1-img-about {
+    width: 50vw;
+}
+
+.sec2-heading {
+    padding: 5vw 0;
+}
+.sec2-about {
+    text-align: center;
+    padding: 5vw 0;
+}
+.sec2-card-container {
+    margin: 3vw 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.sec2-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 90%;
+    height: 25vh;
+    margin: 0 20px ;
+}
+.sec2-head-desc {
+
+}
+.sec2-hd-card {
+    font-size: large;
+    margin: 20px 0;
+    color: rgb(28, 28, 28);
+}
+.sec2-card-desc {
+    line-height: 25px;
+    color: rgb(87, 87, 87);
+}

@@ -1,0 +1,72 @@
+
+.header {
+    padding: 20px 6vw;
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .logo-and-serach {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1.5fr;
+    align-items: center;
+    gap: 3vw;
+    height: 55%;
+  }
+  
+  .logo-div {
+    width: 10%;
+  }
+  .logo-img {
+    width: 150px;
+  }
+  .search-field {
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 5px;
+    padding: 13px;
+    display: grid;
+    grid-template-columns: 5% 95%;
+    height: fit-content;
+    align-items: center;
+  }
+  .search-icon {
+    /* margin: 10px; */
+  }
+  .serach-box {
+    font-weight: 600;
+    border: none;
+    color: rgb(74, 74, 74);
+  }
+  .serach-box:focus {
+    outline: none;
+  }
+  .login-btn {
+    background-color: #5a4bda;
+    border: none;
+    border-radius: 6px;
+    color: rgb(235, 235, 235);
+    font-size:16px;
+    padding: 12px 0px;
+    min-width: 200px;
+    font-weight: bold;
+    width: 80%;
+  }
+  .header-navbar {
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    color: rgb(22, 22, 22);
+    font-size: 18px;
+  }
+  .header-navbar>li>a {
+    color: rgb(57, 57, 57);
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .fa-angle-down {
+    font-size: 14px;
+    font-weight: 900;
+  }
+  

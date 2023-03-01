@@ -1,0 +1,78 @@
+.container {
+    text-align: center;
+    width: 95vw;
+}
+h1 {
+    color: tomato;
+}
+.input_area {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+.input_box, .add_button {
+    height: 30px;
+    margin-top: 1vh;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.478);
+}
+.input_box {
+    min-width: 240px ;
+    width: 400px;
+    text-align: center;
+    font-size: 18px;
+}
+.add_button {
+    min-width: 90px;
+    font-weight: 600;
+    color: teal
+}
+.todo_list {
+    box-shadow: 0px 10px 20px rgba(128, 128, 128, 0.531);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    overflow: hidden;
+    /* padding: 0px 0px; */
+    background-color: rgb(195, 183, 183);
+    max-height: 60vh;
+    max-width: 700px;
+    min-width: 340px;
+}
+.allTodoList {
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgb(111, 106, 106);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0.3em 5px 0.5em;
+    background-color: rgb(237, 237, 237);
+    margin: 1vh auto;
+    color: teal;
+    font-weight: 600;
+    min-width: 320px;
+    width: 95%;
+}
+.para {
+    height: 25px;
+    width: 55%;
+}
+.functional_div > * {
+    font-weight: bold;
+    margin: 0.5vw;
+    border: 1px solid rgb(133, 133, 133);
+    padding: 0 5px;
+}
+.done-btn {
+    color: rgb(0, 128, 43);
+}
+.edit-btn {
+    color: rgb(223, 223, 6);
+}
+.cut-btn {
+    color: red;
+}
+.done {
+    text-decoration: line-through;
+    color: rgb(0, 128, 43);
+}
