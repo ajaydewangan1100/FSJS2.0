@@ -23,9 +23,9 @@ function Header() {
                 <li> 
                     <Link to="/">HOME</Link> </li>
                 <li> 
-                    <Link to="/about">About Us</Link> </li>
+                    <Link to="/about">About us</Link> </li>
                 <li> 
-                    <Link to="/contact">Contact Us</Link> </li>
+                    <Link to="/contact">Contact us</Link> </li>
                 <li>Experience Portal</li>
                 <li>Become an Affiliate</li>
                 <li>Hall of fame</li>
