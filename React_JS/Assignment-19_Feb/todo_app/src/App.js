@@ -6,7 +6,6 @@ function App() {
   const [list, setList] = useState([]);
   const [newID, setNewId] = useState(0);
 
-
   const changing = (event) => {
     setInputValue(event.target.value);
   }
@@ -25,7 +24,6 @@ function App() {
   const editIt = (li) => {
     setInputValue()
   }
-
 
   return (
     <div className="container">
