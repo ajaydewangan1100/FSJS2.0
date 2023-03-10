@@ -21,7 +21,7 @@ function App() {
     console.log(list);
   }
 
-  const editIt = (li) => {
+  const editIt = (e) => {
     setInputValue()
   }
 
@@ -40,7 +40,7 @@ function App() {
                 </p>
                 <div className="functional_div">
                   <span className="done-btn" onClick={(e) => e.target.parentElement.parentElement.firstChild.classList.toggle("done")}>Done</span>
-                  <i className="edit-btn" onClick={() => editIt(li)}>Edit</i>
+                  <i className="edit-btn" onClick={(e) => editIt(e)}>Edit</i>
                   <span className="cut-btn" onClick={(e) => deleteIt(li)}>X</span>
                 </div>
               </div>
