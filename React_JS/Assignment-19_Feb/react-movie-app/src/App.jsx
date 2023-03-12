@@ -12,7 +12,7 @@ function App() {
   
   
   const apiSearch = async () => {
-    // console.log(search);
+    
     let apiURL = "https://www.omdbapi.com/?s=" + search + "&apiKey=f155c772";
     await fetch(apiURL)
     .then(Response => Response.json())
@@ -21,10 +21,9 @@ function App() {
     .catch(error => console.log(error))  
   }
 
-  useEffect( () => {
-    console.log(search)
-    apiSearch() 
-    console.log(search)
+  useEffect( 
+    () => {
+      apiSearch() 
   },[search] );
 
   const searchedMovies = () => {
@@ -32,7 +31,7 @@ function App() {
   }
 
   return (
-    <div className="w-full bg-gray-100 h-[100vh] p-3" >
+    <div className="w-full h-[100vh] px-24 " >
       <SearchForm setSearch={ setSearch } search={search} />
       <CardContainer  />
     </div>
