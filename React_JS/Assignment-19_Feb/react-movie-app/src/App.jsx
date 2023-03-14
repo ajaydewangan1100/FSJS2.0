@@ -1,29 +1,31 @@
-import { useEffect, useState } from 'react'
-// import axios from "react-axios";
+
+import { useEffect, useState, createContext } from 'react'
+import axios from "axios";
 import CardContainer from './components/CardContainer';
 import SearchForm from './components/SearchForm';
 import "./index.css"
 
+export const myContext = createContext();
+
 function App() {
 
   const [search, setSearch] = useState('');
-  const [movies, setMovies] = useState("");
+  const [movies, setMovies] = useState([]);
 
   
   
   const apiSearch = async () => {
-    
     let apiURL = "https://www.omdbapi.com/?s=" + search + "&apiKey=f155c772";
-    await fetch(apiURL)
-    .then(Response => Response.json())
-    .then(data => setMovies(data))
-    .then(() => console.log(movies))
+    await axios.get(apiURL)
+    // .then(Response => Response.json())
+    .then(Response => setMovies(Response.data.Search))
+    // .then(() => console.log(typeof movies, "what"))
     .catch(error => console.log(error))  
   }
 
   useEffect( 
     () => {
-      apiSearch() 
+    apiSearch() 
   },[search] );
 
   const searchedMovies = () => {
@@ -31,10 +33,12 @@ function App() {
   }
 
   return (
-    <div className="w-full h-[100vh] px-24 " >
-      <SearchForm setSearch={ setSearch } search={search} />
-      <CardContainer  />
-    </div>
+    // <myContext.Provider value={ movies }>
+      <div className="w-full h-[100vh] px-4 max-w-[1280px] mx-auto" >
+        <SearchForm setSearch={ setSearch } search={search} />
+        <CardContainer movies={movies} />
+      </div>
+    // </myContext.Provider> 
   )
 }
 
