@@ -5,7 +5,7 @@ import Card from './Card';
 export default function CardContainer(props) {
 
   const cardClicked = (id) => {
-    console.log("clicked id :", id);
+    console.log("clicked id :", id);  
   }
   
   return (
@@ -16,7 +16,7 @@ export default function CardContainer(props) {
         props.movies.map(
           (m) => (
             <>
-            <Card key={m.imdbID} id={m.imdbID} poster={m.Poster} title={m.Title} year={m.Year} cardClicked={cardClicked} /> 
+            <Card id={m.imdbID} poster={m.Poster} title={m.Title} year={m.Year} cardClicked={cardClicked} /> 
             </>
           )):null
         }
