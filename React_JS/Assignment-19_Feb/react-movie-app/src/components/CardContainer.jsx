@@ -1,39 +1,25 @@
 
 import React from 'react';
-import { useContext } from 'react';
-import { myContext } from '../App';
+import Card from './Card';
 
-export default function CardContainer({movies}) {
+export default function CardContainer(props) {
+
+  const cardClicked = (id) => {
+    console.log("clicked id :", id);
+  }
   
-  // const movie = useContext(myContext);
-  // console.log("::::", typeof moviesList);
-  // console.log(movies);
-  console.log(typeof movies, "::type");
-  console.log(movies, "data");
-
   return (
-    <div className=' '>
-      <div className='flex flex-wrap gap-3'>
+    <div className=' mx-auto bg-gray-900 rounded '>
+      <div className='flex flex-wrap justify-center gap-3 py-4 '>
         {
-        movies?
-        movies.map(
+        props.movies?
+        props.movies.map(
           (m) => (
-            <Card poster={m.Poster} title={m.Title} year={m.Year} /> 
-            // console.log("runned")
+            <>
+            <Card key={m.imdbID} id={m.imdbID} poster={m.Poster} title={m.Title} year={m.Year} cardClicked={cardClicked} /> 
+            </>
           )):null
         }
-      </div>
-    </div>
-  )
-}
-
-function Card({poster, title, year}) {
-  return (
-    <div className="rounded p-1 shadow">
-      <img src={poster} className="h-[300px] min-w-[220px] max-w-[220px] rounded" />
-      <div>
-        <span>{title}</span>
-        <span>{year}</span>
       </div>
     </div>
   )
