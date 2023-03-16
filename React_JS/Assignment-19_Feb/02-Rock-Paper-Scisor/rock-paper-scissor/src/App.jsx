@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      Rock Paper Scissor
+      <h1>Rock Paper Scissor</h1>
     </div>
   )
 }
