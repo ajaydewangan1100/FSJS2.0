@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .imageEffectCommon{
+        @apply w-[25%] cursor-pointer  duration-200 rounded
+    }
+
+    .imageEffectUser{
+        @apply hover:scale-110 hover:border
+    }
+}
