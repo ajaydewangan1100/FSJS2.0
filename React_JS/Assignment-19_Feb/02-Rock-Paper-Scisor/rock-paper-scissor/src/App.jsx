@@ -2,22 +2,23 @@ import { useEffect, useState } from 'react'
 import MainGamePage from './components/MainGamePage';
 import PopupWinner from './components/PopupWinner';
 
+import { IoStarSharp } from "react-icons/io5";
 import round from "./assets/round.png";
+import Instructions from './components/Instructions';
 
 function App() {
   const [userClicked, setUserClicked] = useState("");
   const [computerRandom, setComputerRandom] = useState("");
   const [winLoss, setWinLoss] = useState("");
-  const [clickable, setClickable] = useState(true);
+  const [finalWin, setFinalWin] = useState([]);
   const [computerChooosing, setComputerChoosing] = useState(false);
   const str = "RPS";
 
   const Clicked = (value) => {
-    setClickable(false);
+    finalWin.length >= 3 && setFinalWin([]);
     setComputerChoosing(true)
     setUserClicked(value); 
     setComputerRandom(str[Math.floor(Math.random() * 3)]);
-    console.log(computerRandom, ": under clicked");
   }
   
   useEffect(() => {
@@ -28,29 +29,28 @@ function App() {
 
   const computerRandomCreator = () => {
     console.log("random creator ");
+    console.log(finalWin, " : vin");
 
     setTimeout(() => {
-      console.log(computerRandom, userClicked, ": under settimeout");
 
       if(userClicked === computerRandom) {
-        console.log(computerRandom," vs ",userClicked, ": same" );
-        setWinLoss("Tie!")
+        setWinLoss("Round Tie!");
       }
       else if(
         userClicked === str[0] && computerRandom === str[1] || 
         userClicked === str[1] && computerRandom === str[2] ||
         userClicked === str[2] && computerRandom === str[0]
         ){
-          console.log(computerRandom," vs ",userClicked, ": You Loss" );
-          setWinLoss("You Loss!")
+          setWinLoss("You Loss round!");
+          setFinalWin([...finalWin, -1]);
         }
         else if(
           userClicked === str[2] && computerRandom === str[1] || 
           userClicked === str[0] && computerRandom === str[2] ||
           userClicked === str[1] && computerRandom === str[0]
           ){
-            console.log(computerRandom," vs ",userClicked, ": You Win" );
-            setWinLoss("You Win!")
+            setWinLoss("You Win Round!");
+            setFinalWin([...finalWin, 1]);
           }
           
       setComputerChoosing(false);
@@ -60,24 +60,46 @@ function App() {
 
 
   const resetAll = () => {
-    setClickable(true);
     setComputerChoosing(false)
     setUserClicked("");
     setComputerRandom("");
     setWinLoss("");
   } 
 
-  const sendInPopup = { userClicked, winLoss, computerRandom, resetAll };
+  const resetTotal = () => {
+    resetAll();
+    setFinalWin([]);
+  }
+
+  const sendInPopup = { userClicked, winLoss, computerRandom, resetAll, resetTotal, finalWin };
 
   return (
 
-    <div className="m-auto text-center">
-      <h1 className='w-[50%] m-2 mt-5  mx-auto text-[#128989] min-w-[300px] border rounded font-bold text-[lg] bg-gray-200'>Rock Paper Scissor</h1>
-      <div className='w-[98%] h-[100%] pb-[10vh] m-auto flex flex-wrap justify-around p-5 gap-12 sm:gap-1 content-around '>
-        {!clickable &&
-        <div className='w-[100%] h-[100vh] absolute bottom-0 bg-[#ff101045] blur-sm'></div>}
+    <div className="m-auto text-center bg-[#128989cc] pt-[1px] ">
+      <div className='flex justify-center mx-auto mt-5 '>
+        <h1 className='w-[40%] m-2 text-[#128989] min-w-[250px] border rounded font-bold text-[lg] bg-gray-200'>Rock Paper Scissor</h1>
+        {finalWin &&
+        <h1 className='mx-1 rounded flex m-auto'>
+          { 
+          finalWin.length === 0 ? 
+          [0,0,0].map(f => (
+            (f === 0) && <IoStarSharp key={Math.random()} className='text-gray-300 my-1 mx-[2px]'/>
+          ))
+          :
+          finalWin.map(f => (
+            (f === 1) && <IoStarSharp key={f * Math.random()} className='text-yellow-300 my-1 mx-[2px]' /> ||
+            (f === 0) && <IoStarSharp key={f * Math.random()} className='text-gray-300 my-1 mx-[2px]'/> ||
+            (f === -1) && <IoStarSharp key={f * Math.random()} className='text-red-400 my-1 mx-[2px]'/>
+          ))
+          }
+          </h1>}
+      </div>
+      <div className='w-[98%] h-[100%] pb-[10vh] m-auto flex flex-wrap justify-around p-5 gap-12 sm:gap-1 content-around  rounded '>
+      {/* <Instructions /> */}
         {computerChooosing &&
-        <div className=' absolute px-5 py-1 rounded-[20px] top-[35vh] sm:top-[50vh] text-[4vw] text-[#fff]  border-white-800 border-[3px] flex '>
+        <div className='w-[100%] h-[100vh] absolute bottom-0 bg-[#ff101045] blur-xl'></div>}
+        {computerChooosing &&
+        <div className=' absolute px-5 py-1 rounded-[20px] top-[35vh] sm:top-[40vh] md:top-[35vw] lg:top-[30vw] text-[4vw] text-[#fff]  border-white-800 border-[3px] flex  items-center '>
           <img src={round} className='animate-spin mx-4 h-[50px] ' />
           computer Choosing...</div>}
         <MainGamePage computerChooosing={computerChooosing} winLoss={winLoss} />
@@ -85,7 +107,7 @@ function App() {
         <MainGamePage computerChooosing={computerChooosing} winLoss={winLoss} user={true} Clicked={Clicked} />
       </div>  
       {winLoss &&
-      <PopupWinner setUserClicked={setUserClicked} winLoss={winLoss} setWinLoss={setWinLoss} sendInPopup={sendInPopup} />}
+      <PopupWinner setUserClicked={setUserClicked} winLoss={winLoss} setWinLoss={setWinLoss} sendInPopup={sendInPopup} finalWin={finalWin} />}
     </div>
   )
 }

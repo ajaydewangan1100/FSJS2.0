@@ -15,12 +15,10 @@ module.exports = {
       keyframes: {
         motionComp: {
           '0%': { transform: 'rotate(-15deg) ' },
-          // '40%': { transform: 'rotate(45deg) translateY(-40%) translateX(-20%) ' },
           '80%': { transform: 'rotate(90deg) translateY(-80%) translateX(0%) ', position: 'relative'  }
         },
         motionUser: {
           '0%': { transform: 'rotate(15deg) ' },
-          // '40%': { transform: 'rotate(-45deg) translateY(-40%) translateX(40%)' },
           '80%': { transform: 'rotate(-90deg) translateY(-80%) translateX(40%)', position: 'relative'  }
         },
         scaleThings: {
