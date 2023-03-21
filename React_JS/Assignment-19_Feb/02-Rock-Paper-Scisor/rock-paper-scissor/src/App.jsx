@@ -55,7 +55,7 @@ function App() {
           
       setComputerChoosing(false);
       
-    }, 3000);
+    }, 800);
   }
 
 
@@ -82,8 +82,7 @@ function App() {
         <h1 className='mx-1 rounded flex m-auto'>
           { 
           finalWin.length === 0 ? 
-          [0,0,0].map(f => (
-            (f === 0) && <IoStarSharp key={Math.random()} className='text-gray-300 my-1 mx-[2px]'/>
+          [0,0,0].map(f => (<IoStarSharp key={Math.random()} className='text-gray-300 my-1 mx-[2px]'/>
           ))
           :
           finalWin.map(f => (
@@ -95,11 +94,11 @@ function App() {
           </h1>}
       </div>
       <div className='w-[98%] h-[100%] pb-[10vh] m-auto flex flex-wrap justify-around p-5 gap-12 sm:gap-1 content-around  rounded '>
-      {/* <Instructions /> */}
+      <Instructions />
         {computerChooosing &&
         <div className='w-[100%] h-[100vh] absolute bottom-0 bg-[#ff101045] blur-xl'></div>}
         {computerChooosing &&
-        <div className=' absolute px-5 py-1 rounded-[20px] top-[35vh] sm:top-[40vh] md:top-[35vw] lg:top-[30vw] text-[4vw] text-[#fff]  border-white-800 border-[3px] flex  items-center '>
+        <div className=' absolute px-5 py-1 rounded-[20px] top-[40vh] sm:top-[40vh] md:top-[35vw] lg:top-[30vw] text-[4vw] text-[#fff]  border-white-800 border-[3px] flex  items-center '>
           <img src={round} className='animate-spin mx-4 h-[50px] ' />
           computer Choosing...</div>}
         <MainGamePage computerChooosing={computerChooosing} winLoss={winLoss} />
