@@ -93,7 +93,7 @@ function App() {
           }
           </h1>}
       </div>
-      <div className='w-[98%] h-[100%] pb-[10vh] m-auto flex flex-wrap justify-around p-5 gap-12 sm:gap-1 content-around  rounded '>
+      <div className='w-[98%] h-[100%] pb-[10vh] m-auto flex flex-wrap justify-around p-5 gap-8 sm:gap-1 content-around  rounded '>
       <Instructions />
         {computerChooosing &&
         <div className='w-[100%] h-[100vh] absolute bottom-0 bg-[#ff101045] blur-xl'></div>}

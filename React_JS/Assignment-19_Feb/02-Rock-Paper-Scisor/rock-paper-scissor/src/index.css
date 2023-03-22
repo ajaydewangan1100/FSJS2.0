@@ -4,7 +4,7 @@
 
 @layer components{
     .imageEffectCommon{
-        @apply w-[28%]  duration-200 rounded duration-300 p-1 m-3 
+        @apply w-[28%]  duration-200 rounded duration-300 p-1 m-1 
     }
 
     .imageEffectUser{
