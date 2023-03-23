@@ -92,9 +92,9 @@ function App() {
           ))
           }
           </h1>}
-      </div>
-      <div className='w-[98%] h-[100%] pb-[10vh] m-auto flex flex-wrap justify-around p-5 gap-8 sm:gap-1 content-around  rounded '>
-      <Instructions />
+        </div>
+        <div className='w-[98%] h-[100%] pb-[10vh] m-auto flex flex-wrap            justify-around p-5 gap-8 sm:gap-1 content-around  rounded '>
+        <Instructions />
         {computerChooosing &&
         <div className='w-[100%] h-[100vh] absolute bottom-0 bg-[#ff101045] blur-xl'></div>}
         {computerChooosing &&
@@ -105,6 +105,8 @@ function App() {
         <div className='border border-gray-500 border-1 block w-[80%] sm:w-[2px] h-[2px] sm:h-[300px] '></div>
         <MainGamePage computerChooosing={computerChooosing} winLoss={winLoss} user={true} Clicked={Clicked} />
       </div>  
+      <div className='text-gray-300 py-4'><p> This website is made with &#128159; by 
+        <a href="https://www.linkedin.com/in/ajaydewangan1100/" target="_blank" className='text-white font-bold rounded underline mx-[2px] hover:text-[#f2b35d]'> Ajay</a></p></div>
       {winLoss &&
       <PopupWinner setUserClicked={setUserClicked} winLoss={winLoss} setWinLoss={setWinLoss} sendInPopup={sendInPopup} finalWin={finalWin} />}
     </div>
