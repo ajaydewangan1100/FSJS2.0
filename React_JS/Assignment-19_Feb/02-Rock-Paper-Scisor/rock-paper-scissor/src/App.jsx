@@ -105,7 +105,8 @@ function App() {
         <div className='border border-gray-500 border-1 block w-[80%] sm:w-[2px] h-[2px] sm:h-[300px] '></div>
         <MainGamePage computerChooosing={computerChooosing} winLoss={winLoss} user={true} Clicked={Clicked} />
       </div>  
-      <div className='text-gray-300 py-4'><p> This website is made with &#128159; by 
+      <div className='text-gray-300 py-4'>
+        <p> This website is made with &#128159; by 
         <a href="https://www.linkedin.com/in/ajaydewangan1100/" target="_blank" className='text-white font-bold rounded underline mx-[2px] hover:text-[#f2b35d]'> Ajay</a></p></div>
       {winLoss &&
       <PopupWinner setUserClicked={setUserClicked} winLoss={winLoss} setWinLoss={setWinLoss} sendInPopup={sendInPopup} finalWin={finalWin} />}
