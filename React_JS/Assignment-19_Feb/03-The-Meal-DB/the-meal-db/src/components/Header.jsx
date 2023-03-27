@@ -16,9 +16,6 @@ const Header = () => {
           <Link to="/contact" 
           className='bg-gray-200 hover:bg-[#207645] hover:text-gray-100 font-bold text-[#207645] rounded px-4 py-2 duration-200 '> 
           Contact </Link>
-          {/* <Link to="/login" 
-          className='bg-gray-200 hover:bg-[#207645] hover:text-gray-100 font-bold text-[#207645] rounded px-4 py-2 duration-200 '> 
-          Login </Link> */}
         </div>
     </div>
   )
