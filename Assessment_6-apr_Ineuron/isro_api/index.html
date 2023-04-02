@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icon_isro.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <title>Isro Api</title>
+</head>
+<body>
+    <div>
+        <header>
+            <h2 class="heading1">This is website for showing <span>ISRO's</span> spacecraft's, rocket's and center's data.</h2>
+            <nav class="nav_bar">
+                <ul class="ul">
+                    <li><a href="#spacecraft"  class="link">Spacecraft's</a></li>
+                    <li><a href="#rocket"  class="link">Rocket's</a></li>
+                    <li><a href="#center"  class="link">Center's</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <div id="description">
+                <div id="spacecraft">
+                    <h2 class="heading2">Spacecraft's - ISRO have <i id="space_count"></i> Spacecraft's</h2>
+                    <ul class="list_craft" id="list_craft">
+                    </ul>
+                </div>
+                <div id="rocket">
+                    <h2 class="heading2">Rocket's - ISRO have <i id="rocket_count"></i> Rocket's </h2>
+                    <ul class="list_rocket" id="list_rocket">
+                    </ul>
+                </div>
+                <div id="center">
+                    <h2 class="heading2">Center's - ISRO have <i id="center_count"></i> Centers under India</h2>
+                    <ul class="list_center" id="list_center">
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Script started here -->
+    <script>
+
+        function work(){
+            const list_craft = document.getElementById("list_craft");
+            const list_rocket = document.getElementById("list_rocket");
+            const list_center = document.getElementById("list_center");
+            const space_count = document.getElementById("space_count");
+            const rocket_count = document.getElementById("rocket_count");
+            const center_count = document.getElementById("center_count");
+
+
+            fetch("https://isro.vercel.app/api/spacecrafts")
+            .then(Response => Response.json())
+            .then(Obj => Obj.spacecrafts)
+            .then(Data => (
+                space_count.innerHTML = Data.length,
+                Data.map((D, index) => {
+                    list_craft.innerHTML += `<li key=${index}>${index + 1 + '. ' + D.name}</li>`
+                })
+            ));
+
+            
+            fetch("https://isro.vercel.app/api/launchers")
+            .then(Response => Response.json())
+            .then(Obj => Obj.launchers)
+            .then(Data => (
+                rocket_count.innerHTML = Data.length,
+                Data.map((D, index) => {
+                    list_rocket.innerHTML += `<li key=${index}>${index + 1 + '. ' + D.id}</li>`
+                })
+            ));
+
+            
+            fetch("https://isro.vercel.app/api/centres")
+            .then(Response => Response.json())
+            .then(Obj => Obj.centres)
+            .then(Data => (
+                center_count.innerHTML = Data.length,
+                Data.map((D, index) => {
+                    list_center.innerHTML += `<li key=${index}>${index + 1 + '. ' + D.name + " - " + D.Place + ", " + D.State}</li>`
+                })
+            ))
+        };
+        work();
+
+    </script>
+</body>
+</html>

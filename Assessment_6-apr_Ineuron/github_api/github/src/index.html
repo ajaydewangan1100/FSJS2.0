@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
+  <title>Github user Info</title>
+</head>
+<body class="bg-gray-500">
+  <div class="text-center">
+    <!-- Search form div -->
+    <div class="bg-gray-700">
+      <form name="githubUser" id="searchForm"
+      class="bg-gray flex justify-center max-w-600px min-w-[340px] w-[60vw] items-center gap-2 p-3 mx-auto">
+        <input id="inputField"
+        class="p-1 outline-none border rounded w-[80%] font-semibold" type="text" placeholder="Type github username" >
+        <button class="border rounded p-1 text-white bg-gray-400 font-semibold hover:bg-gray-600"> Search</button>
+      </form>
+    </div>
+    <p class="font-semibold text-gray-200 rounded py-1 mt-4">
+      Find github Id details.</p>
+
+    <!-- Info div -->
+    <div>
+      <div  id="infoDiv"  onclick="hideInfo()"
+      class="absolute w-screen h-[100vh] top-[0px] text-left left-0 border bg-[#44444484] flex justify-center items-baseline py-20 ">
+        <button onclick="hideInfo()" 
+        class="px-4 py-2 rounded-full hover:scale-150 duration-200 text-red-500 border fixed top-[50px] right-[30px] md:top-[100px] md:right-[50px]">X</button>
+  
+        <div class="px-2 sm:px-4 mx-auto flex flex-wrap justify-center items-center gap-4 rounded bg-gray-800 max-w-[840px] min-w-[320px] h-auto ">
+          <img id="avatar" src="" 
+          class="max-w-[250px] mx-auto rounded bg-gray-400 shadow m-2">
+          <div class="md:text-lg font-semibold text-white w-[500px] border p-1 rounded">
+            <h3 id="nameHere"></h3>
+            <span >  Link to github - 
+              <a id="profileLink" class="hover:underline text-green-400"></a>
+            </span>
+            <h5> <h5 id="created"></h5></h5>
+            <p id="userBio"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-[200px]" id="notFoundDiv"> </div>
+    </div>
+
+  </div>
+  <script>
+
+    const form = document.getElementById("searchForm");
+    const input = document.getElementById("inputField");
+    const infoDiv = document.getElementById("infoDiv");
+    const avatar = document.getElementById("avatar");
+    const nameHere = document.getElementById("nameHere");
+    const profileLink = document.getElementById("profileLink");
+    const created = document.getElementById("created");
+    const userBio = document.getElementById("userBio");
+    const notFoundDiv = document.getElementById("notFoundDiv");
+    
+    infoDiv.classList.add("hidden")
+
+
+    form.addEventListener("submit", function (event){
+      event.preventDefault();
+      if(input.value !== ""){fetching()}
+      else {
+          notFoundDiv.innerText = "Input area empty...";}
+    });
+
+    function fetching() {
+      const apiURL =  "https://api.github.com/users/" + input.value;
+      fetch(apiURL)
+      .then(Data => Data.json())
+      .then(Response => {
+        if(Response.message !== "Not Found"){
+          showingData(Response);
+        }
+        else {
+          console.log("User Not Found");
+          notFoundDiv.innerText = "User Not Found";
+        }
+      })
+      .catch(error => console.log(error))
+
+    }
+
+    function showingData(profile) {
+      profile.avatar_url && (avatar.src = profile.avatar_url);
+      profile.name && (nameHere.innerText = " User Name - " + profile.name);
+      profile.html_url && (
+        profileLink.innerText = " " + profile.html_url,
+        profileLink.href = profile.html_url
+        );
+      profile.created_at && (created.innerText =  " Account Created - " +
+      new Date(profile.created_at).getDate() + "." +
+      (new Date(profile.created_at).getMonth() + 1) + "." +
+      new Date(profile.created_at).getFullYear()
+      );
+      profile.bio && (userBio.innerText = " User Bio - " + profile.bio);
+      notFoundDiv.innerText = "";
+      infoDiv.classList.remove("hidden")
+    }
+
+    function hideInfo() {
+      console.log("hiding info");
+      infoDiv.classList.add("hidden")
+    }
+  </script>
+</body>
+</html>
+
+<!-- https://api.github.com/users/ -->
