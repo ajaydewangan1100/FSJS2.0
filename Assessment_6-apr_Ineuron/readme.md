@@ -8,6 +8,5 @@
 ## 2. [Isro API Live] (https://isro-api-data.netlify.app/)
 ## [source ] (https://github.com/ajaydewangan1100/FSJS2.0/tree/main/Assessment_6-apr_Ineuron/isro_api)
 
-
-## 2. [Github User Not Live] ()
+## 2. [Github User Details till Not Live] ()
 ## [source ] (https://github.com/ajaydewangan1100/FSJS2.0/tree/main/Assessment_6-apr_Ineuron/github_api/github)
