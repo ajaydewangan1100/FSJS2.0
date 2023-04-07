@@ -1,17 +1,24 @@
-const { createSlice } = require("@reduxjs/toolkit");
+import { createSlice, current } from '@reduxjs/toolkit'
 
 const initialState = {
-    value : [{
-        id: 1,
-        task: "wood cut",
-        isDone: false
-    }],
+    value : [   
+        {
+            id: 1,
+            task: "Wood cut agian again agian",
+            isDone: true
+        },
+        {
+            id: 2,
+            task: "Wood set",
+            isDone: false
+        }
+    ],
 }
 
-export const counterSlice = createSlice({
+export const todoSlice = createSlice({
     name : 'todoList',
     initialState,
-    reducer : {
+    reducers : {
         create : (state, action) => {
             state.value.unshift({
                 id: Math.random(),
@@ -19,7 +26,7 @@ export const counterSlice = createSlice({
                 isDone: false
             })
         },
-        delete : (state, action) => {
+        deleteTodo : (state, action) => {
             state.value = state.value.filter(todo => todo.id != action.payload)
         },
         update : (state, action) => {
@@ -28,13 +35,21 @@ export const counterSlice = createSlice({
                 else {todo.task = action.payload.task}
             })
         },
-        done : (state, action) => {
-            state.value = state.value.map(todo => {
-                if(todo.id !== action.payload.id){todo}
-                else {todo.isDone = !isDone}
-            })
+        doneTodo : (state, action) => {
+            for(let i = 0; i < current(state.value).length; i++){
+                (current(state.value)[i].id === action.payload) 
+                && 
+                (state.value[i].isDone = !state.value[i].isDone)
+            }
+            // current(state.value).map(todo => (
+            //     (todo.id === action.payload) 
+            //     && 
+            //     (todo.isDone = !todo.isDone)
+            // ))
         }
     }
 })
 
-export const { createTodo, deleteTodo, updateTodo, doneTodo } = counterSlice.actions
+export const { create, deleteTodo, update, doneTodo } = todoSlice.actions;
+
+export default todoSlice.reducer;

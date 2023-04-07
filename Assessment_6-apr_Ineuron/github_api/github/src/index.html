@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./dist/output.css" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
   <title>Github user Info</title>
@@ -87,18 +87,18 @@
     }
 
     function showingData(profile) {
-      profile.avatar_url && (avatar.src = profile.avatar_url);
-      profile.name && (nameHere.innerText = " User Name - " + profile.name);
-      profile.html_url && (
+      profile.avatar_url ? (avatar.src = profile.avatar_url) : avatar.src = "";
+      profile.name ? (nameHere.innerText = " User Name - " + profile.name) : nameHere.innerText = "";
+      profile.html_url ? (
         profileLink.innerText = " " + profile.html_url,
         profileLink.href = profile.html_url
-        );
-      profile.created_at && (created.innerText =  " Account Created - " +
+        ) : profileLink.innerText = "";
+      profile.created_at ? (created.innerText =  " Account Created - " +
       new Date(profile.created_at).getDate() + "." +
       (new Date(profile.created_at).getMonth() + 1) + "." +
       new Date(profile.created_at).getFullYear()
-      );
-      profile.bio && (userBio.innerText = " User Bio - " + profile.bio);
+      ) : created.innerText = "";
+      profile.bio ? (userBio.innerText = " User Bio - " + profile.bio) : userBio.innerText = "";
       notFoundDiv.innerText = "";
       infoDiv.classList.remove("hidden")
     }
