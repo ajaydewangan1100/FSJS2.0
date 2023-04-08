@@ -3,13 +3,19 @@ import React, { useEffect, useState } from 'react';
 import { FiEdit, FiTrash2, FiCheck } from "react-icons/fi";
 
 import { useSelector, useDispatch } from 'react-redux';
-import { update, deleteTodo, doneTodo } from '../features/counter/counterSlice';
+import { getMyLocalTodo, setMyLocalTodo, update, deleteTodo, doneTodo } from '../features/counter/counterSlice';
 
 
-const TodoList = () => {
+const TodoList = ({ searchInput }) => {
   
   const allTodos = useSelector(state => state.todo.value );
   const dispatch = useDispatch();
+ 
+  useEffect(() => {
+    JSON.parse(localStorage.getItem("myTodo")) 
+    &&
+    dispatch(getMyLocalTodo())
+  }, [])
   
   const [inputValue, setInputvalue] = useState("");
   const [updateClicked, setUpdateClicked] = useState(0);
@@ -19,6 +25,7 @@ const TodoList = () => {
   
   const todoMarked = (id) => {
     dispatch(doneTodo(id));
+    dispatch(setMyLocalTodo());
   }
   
   const updateHandler = (id , task) => {
@@ -27,37 +34,44 @@ const TodoList = () => {
     setUpdateClicked(id);
   }
 
-  const updateSubmit = () => {
-    // dispatch(update(id))
+  const updateSubmit = async (id) => {
+    await dispatch(update({ id, inputValue }))
+    await dispatch(setMyLocalTodo())
     console.log(updateClicked);
     setUpdateClicked(0)
     setInputvalue("");
   }
   
   const deleteHandler = (id) => {
-    dispatch(deleteTodo(id))
+    dispatch(deleteTodo(id));
+    dispatch(setMyLocalTodo());
   }
   
 
   return (
     <div className='overflow-y-auto max-h-[80vh] pr-1'>
       {
-        allTodos.map(todo => {
+        allTodos
+        .filter(ToDo => 
+          ToDo.task.toLowerCase().includes(searchInput.toLowerCase())
+        )
+        .map(todo => {
 
-          const inputClasses = todo.isDone 
-          &&
-           'p-2 px-1 sm:px-3 font-semibold bg-inherit w-[100%] border outline-offset-0 rounded overflow-hidden outline-none' + " text-yellow-500"
+          const inputClasses = 'p-2 px-1 sm:px-3 font-semibold bg-inherit w-[100%] border outline-offset-0 rounded overflow-hidden outline-none text-yellow-500';
 
-          const inputDivClasses = !todo.isDone 
+          const inputDivClasses = 
+          !todo.isDone 
           ? 
-          "px-1 sm:px-3 text-lg text-white bg-inherit font-bold overflow-hidden "
+          "px-1 sm:px-3 text-lg text-white bg-inherit font-bold overflow-hidden truncate "
           :
-          "px-1 sm:px-3 bg-inherit font-semibold " + ' line-through decoration-green-500 text-green-500'
-          const doneTodo = !todo.isDone 
+          "px-1 sm:px-3 bg-inherit font-semibold truncate " + ' line-through decoration-green-500 text-green-500'
+
+          const doneTodo = 
+          !todo.isDone 
           ? 
-          'h-[15px] w-[15px] bg-white rounded ' 
+          'h-[15px] min-w-[15px] w-[15px] bg-white rounded ' 
           :
-           'h-[15px] w-[15px] bg-white rounded ' + " bg-green-500";
+           'h-[15px] min-w-[15px] w-[15px] rounded ' + " bg-green-500";
 
           return (
             <div key={todo.id} 
@@ -72,7 +86,7 @@ const TodoList = () => {
                 ?
                 <div className={inputDivClasses} onClick={() => setClickedTodo(todo.task)} > {todo.task} </div>
                 :
-                <input key={todo.id} id={todo.id} onchange={(e) => setInputvalue(e.target.value)}
+                <input key={todo.id} id={todo.id} onChange={(e) => setInputvalue(e.target.value)}
                 className={'input' + inputClasses} value={inputValue} />
                 }
               </div>
@@ -96,13 +110,15 @@ const TodoList = () => {
           )
         })
       }
-      {clickedTodo && 
+      {
+      clickedTodo && 
       <div onClick={() => setClickedTodo("")}
       className='absolute  w-[100%] h-[100%] top-0 left-0 bg-[#45454545] flex flex-col justify-center items-center p-3'>
         <div className='rounded bg-gray-600 text-white font-semibold text-2xl p-4 max-w-[500px] '>{clickedTodo}</div>
         <button onClick={() => setClickedTodo("")}
         className='px-3 py-1 text-red-400 text-xl hover:font-semibold hover:scale-150 duration-200 border rounded-full mt-4 '>X</button>
-      </div> }
+      </div> 
+      }
     </div>
     
   )

@@ -1,24 +1,25 @@
-import { createSlice, current } from '@reduxjs/toolkit'
+import { createSlice, current } from '@reduxjs/toolkit';
+import React, { useEffect } from 'react';
 
 const initialState = {
-    value : [   
-        {
-            id: 1,
-            task: "Wood cut agian again agian",
-            isDone: true
-        },
-        {
-            id: 2,
-            task: "Wood set",
-            isDone: false
-        }
-    ],
+    value : [],
 }
+
 
 export const todoSlice = createSlice({
     name : 'todoList',
     initialState,
     reducers : {
+        getMyLocalTodo : (state) => {
+            JSON.parse(localStorage.getItem("myTodo"))
+            ?
+            (state.value = JSON.parse(localStorage.getItem("myTodo")) )
+            :
+            (state.value = [],console.log(current(state.value)) )
+        },
+        setMyLocalTodo : (state) => {
+            localStorage.setItem("myTodo", JSON.stringify(state.value))
+        },
         create : (state, action) => {
             state.value.unshift({
                 id: Math.random(),
@@ -30,10 +31,11 @@ export const todoSlice = createSlice({
             state.value = state.value.filter(todo => todo.id != action.payload)
         },
         update : (state, action) => {
-            state.value = state.value.map(todo => {
-                if(todo.id !== action.payload.id){ todo } 
-                else {todo.task = action.payload.task}
-            })
+            for(let i = 0; i < current(state.value).length; i++){
+                (current(state.value)[i].id === action.payload.id) 
+                && 
+                (state.value[i].task = action.payload.inputValue)
+            }
         },
         doneTodo : (state, action) => {
             for(let i = 0; i < current(state.value).length; i++){
@@ -50,6 +52,6 @@ export const todoSlice = createSlice({
     }
 })
 
-export const { create, deleteTodo, update, doneTodo } = todoSlice.actions;
+export const { getMyLocalTodo, setMyLocalTodo, create, deleteTodo, update, doneTodo } = todoSlice.actions;
 
 export default todoSlice.reducer;
