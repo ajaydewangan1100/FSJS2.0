@@ -49,7 +49,7 @@ const TodoList = ({ searchInput }) => {
   
 
   return (
-    <div className='overflow-y-auto max-h-[80vh] pr-1'>
+    <div className='overflow-y-auto max-h-[80vh] px-1 '>
       {
         allTodos
         .filter(ToDo => 
