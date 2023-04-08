@@ -37,7 +37,7 @@ const TodoForm = ({ setSearchInput }) => {
         <Info setInfo={setInfo} />
         :
         <FiFeather onClick={() => setInfo(true)}
-        className='text-yellow-700 border border-gray-400 rounded p-[2px] text-2xl absolute left-[20px] top-[5px] ' />
+        className='text-yellow-500 border border-[#44444430] rounded p-[2px] text-2xl absolute left-[20px] top-[5px] ' />
         }
         <form onSubmit={submitTodo}
         className='flex justify-center bg-gray-600 rounded gap-2 items-center max-w-[600px] min-w-[330px] my-2 mx-auto' >

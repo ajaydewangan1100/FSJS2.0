@@ -5,24 +5,24 @@ const Info = ({ setInfo }) => {
   return (
     
     <div onClick={() => setInfo(false)}
-    className='fixed w-[100vw] h-[90vh] top-0 left-0 bg-[#45454545] flex flex-col justify-center items-center p-3'>
+    className='fixed w-[100vw] h-[100vh] top-0 left-0 bg-[#45454545] flex flex-col justify-center items-center p-3'>
       <div className='rounded bg-gray-500 text-white font-semibold text-xl p-4 max-w-[500px] text-center '>
         <span>You can <i>create, read, update </i>and <i>delete</i> the TODO. <br /> Todo's are stored on your local storage of browser, so you can access it anytime. </span>
         <br />
         <i className='text-yellow-100 text-sm flex flex-col justify-center my-3 '>If you want to connect me <br /> 
-          <span className='text-base'>
+          <span className='text-base mb-3'>
             <a href='https://www.linkedin.com/in/ajaydewangan1100/'>
-              Linkedin -&nbsp;<FiLinkedin className='mx-auto mt-1 border text-3xl p-1 rounded text-green-400 inline ' /></a> &nbsp;&nbsp;&nbsp;
+              Linkedin -&nbsp;<FiLinkedin className='mx-auto mt-1 border text-3xl p-1 rounded text-green-400 inline  hover:bg-gray-100' /></a> &nbsp;&nbsp;&nbsp;
               Github - &nbsp;
             <a href='https://github.com/ajaydewangan1100'>
-              <FiGithub className='mx-auto mt-1 border text-3xl p-1 rounded text-green-400 inline ' /></a>
+              <FiGithub className='mx-auto mt-1 border text-3xl p-1 rounded text-green-400 inline hover:bg-gray-100' /></a>
               
           </span>
           <br />
           <span className='flex items-center justify-center'>
             Code of this Todo Project is here -  &nbsp;
             <a href='https://github.com/ajaydewangan1100/FSJS2.0/tree/main/React_JS/Assignment-19_Feb/todo_with_redux'> 
-            <FiCode className='mx-auto border text-3xl p-1 rounded text-green-400 inline ' /></a>
+            <FiCode className='mx-auto border text-3xl p-1 rounded text-green-400 inline  hover:bg-gray-100' /></a>
           </span>
         </i>
         
