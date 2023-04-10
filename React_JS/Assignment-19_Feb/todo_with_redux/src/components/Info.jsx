@@ -14,17 +14,17 @@ const Info = ({ setInfo }) => {
         <hr className='my-2 w-[50vw] mx-auto max-w-[300px] ' />
         <i className='text-yellow-100 text-sm flex flex-col justify-center my-3 '>If you want to connect me <br /> 
           <span className='text-base mb-3'>
-            <a href='https://www.linkedin.com/in/ajaydewangan1100/'>
+            <a href='https://www.linkedin.com/in/ajaydewangan1100/' target='_blank'>
               Linkedin -&nbsp;<FiLinkedin className='mx-auto mt-1 border text-3xl p-1 rounded text-green-400 inline  hover:bg-gray-100' /></a> &nbsp;&nbsp;&nbsp;
               Github - &nbsp;
-            <a href='https://github.com/ajaydewangan1100'>
+            <a href='https://github.com/ajaydewangan1100' target='_blank'>
               <FiGithub className='mx-auto mt-1 border text-3xl p-1 rounded text-green-400 inline hover:bg-gray-100' /></a>
               
           </span>
           <br />
           <span className='flex items-center justify-center'>
             Code of this Todo Project is here -  &nbsp;
-            <a href='https://github.com/ajaydewangan1100/FSJS2.0/tree/main/React_JS/Assignment-19_Feb/todo_with_redux'> 
+            <a href='https://github.com/ajaydewangan1100/FSJS2.0/tree/main/React_JS/Assignment-19_Feb/todo_with_redux' target='_blank'> 
             <FiCode className='mx-auto border text-3xl p-1 rounded text-green-400 inline  hover:bg-gray-100' /></a>
           </span>
         </i>
