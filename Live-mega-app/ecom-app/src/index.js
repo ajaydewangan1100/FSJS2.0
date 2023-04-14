@@ -10,6 +10,7 @@ const mongoose = require("mongoose");
         await mongoose.connect(config.MONGODB_URL);
         console.log("DB CONNECTED !");
 
+        // also checking here for express connect or not to DB
         app.on('error', (err) => {
             console.log("ERROR: ", err);
             throw err
