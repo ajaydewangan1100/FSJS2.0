@@ -79,7 +79,7 @@ UserSchema.methods = {
         return forgotToken
     }
 
-    // when user clicked on url then need to check 
+    // when user clicked on url then need to check  
     
 }
 
